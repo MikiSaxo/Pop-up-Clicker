@@ -15,8 +15,7 @@ public class MainGame : MonoBehaviour
     public List<Upgrade> Upgrades;
     private List<Upgrade> _unlockedUpgrades = new List<Upgrade>();
     private float _timerAutoDamage = 0;
-    //public Text DamageClic;
-    //public int damageClic = 1;
+    public int damageClic = 1; //test
 
     public static MainGame Instance;
 
@@ -25,7 +24,7 @@ public class MainGame : MonoBehaviour
         Instance = this;
     }
 
-    // Start is called before the first frame update
+
     void Start()
     {
         Monster.SetMonster(Monsters[_currentMonster]);
@@ -53,6 +52,16 @@ public class MainGame : MonoBehaviour
         }
 
     }
+    private void HitDPS(int damage, Monster monster)
+    {
+        monster.Hit(damage);
+
+        if (monster.IsAlive()== false)
+        {
+            NextMonster();
+        }
+
+    }
 
     private void NextMonster()
     {
@@ -64,34 +73,19 @@ public class MainGame : MonoBehaviour
     {
         _unlockedUpgrades.Add(upgrade);
     }
-    //public void UpdateDamage()
-    //{
-    //    DamageClic.text = $"{damageClic}";
-    //}
-        // Update is called once per frame
+
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 world = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(world, Vector2.zero);
             if (hit.collider!= null)
             {
-                //Debug.Log(hit.collider.name);
-               Monster monster = hit.collider.GetComponent<Monster>();
-                Hits(1, Monster);
-                //monster.Hit(1);
-                //GameObject go = GameObject.Instantiate(PrefabHitPoint, monster.Canvas.transform, false);
-                //go.transform.localPosition = new Vector3(0, 0, 0);
-                //go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 100;
-                //go.transform.DOLocalMoveY(150, 0.8f);
-                //go.GetComponent<Text>().DOFade(0, 0.8f);
-                //GameObject.Destroy(go, 0.8f);
-
-                //if (monster.IsAlive()== false)
-                //{
-                //    NextMonster();
-                //}
+               
+                Monster monster = hit.collider.GetComponent<Monster>();
+                Hits(damageClic, Monster);                
             }
 
         }
@@ -103,8 +97,7 @@ public class MainGame : MonoBehaviour
             _timerAutoDamage = 0;
             foreach (var upgrade in _unlockedUpgrades)
             {
-                //Monster.Hit(upgrade.DPS);
-                Hits(upgrade.DPS, Monster);
+                HitDPS(upgrade.DPS, Monster);
             }
         }
 

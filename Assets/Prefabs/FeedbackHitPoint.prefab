@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8329626070879364589}
   - component: {fileID: 3805084389752066074}
   m_Layer: 5
-  m_Name: Damageclic
+  m_Name: TextDamageclic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2944140137755530805}
-  - component: {fileID: 9147964085359683842}
+  - component: {fileID: 1548418434881923619}
   m_Layer: 5
   m_Name: FeedbackHitPoint
   m_TagString: Untagged
@@ -116,24 +116,16 @@ RectTransform:
   m_AnchoredPosition: {x: 411, y: 225.5}
   m_SizeDelta: {x: 822, y: 451}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!223 &9147964085359683842
-Canvas:
+--- !u!114 &1548418434881923619
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6173749543131167822}
   m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1527ba689eb5744d9c9fb46874d9c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDamageClic: {fileID: 3805084389752066074}
