@@ -15,7 +15,7 @@ public class MainGame : MonoBehaviour
     public List<Upgrade> Upgrades;
     private List<Upgrade> _unlockedUpgrades = new List<Upgrade>();
     private float _timerAutoDamage = 0;
-    public int damageClic = 1; //test
+    public int damageClic = 1;
 
     public static MainGame Instance;
 

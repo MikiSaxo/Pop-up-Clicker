@@ -987,7 +987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00032846362, y: -0.00031089783}
+  m_AnchoredPosition: {x: 0.0008835226, y: -0.00031089783}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -1440,32 +1440,32 @@ MonoBehaviour:
   - Name: Roseline
     Description: Adds 1 dps
     Sprite: {fileID: -1838724678503747833, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
-    Cost: 20
+    Cost: 0
     DPS: 1
   - Name: MicheMiche
     Description: Adds 10 dps
     Sprite: {fileID: 3877829352684461634, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
-    Cost: 100
+    Cost: 0
     DPS: 10
   - Name: Pierre
     Description: Adds 25 dps
     Sprite: {fileID: -7040421564613326933, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
-    Cost: 300
+    Cost: 0
     DPS: 25
   - Name: Jeane
     Description: Adds 50 dps
     Sprite: {fileID: -6883368339604643850, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
-    Cost: 600
+    Cost: 0
     DPS: 50
   - Name: Gomart
     Description: Adds 100 dps
     Sprite: {fileID: -6978437120488251390, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
-    Cost: 1200
+    Cost: 0
     DPS: 100
   - Name: BigWhale
     Description: Adds 200 dps
     Sprite: {fileID: 219365852601907621, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
-    Cost: 2400
+    Cost: 0
     DPS: 200
   damageClic: 1
 --- !u!4 &1607118923

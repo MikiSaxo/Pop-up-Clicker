@@ -26,11 +26,12 @@ public class UpgradeUI : MonoBehaviour
         TextCost.text = upgrade.Cost + "$";
     }
     public void Onclick()
-    {
+    {        
+        
         MainGame.Instance.AddUpgrade(_upgrade);
-
-        //ButtonCost.SetActive(false); //ça fonctionne ça
         //UpdateParameter();
+        //ButtonCost.SetActive(false); //ça fonctionne ça
+
     }
     public void OnClickUpdateDamage()
     {
@@ -41,7 +42,7 @@ public class UpgradeUI : MonoBehaviour
     //{
     //    //_upgrade.Name = "JeanPierre";
     //    _upgrade.DPS *= 2;
-    //    _upgrade.Cost *= 1.5f;
+    //    _upgrade.Cost *= 2;
     //    _upgrade.Description = "Add " + _upgrade.DPS + " dps";
     //    Initialize(_upgrade);
     //}
@@ -53,8 +54,6 @@ public class Upgrade
     public string Name;
     public string Description;
     public Sprite Sprite;
-    public float Cost;
+    public int Cost;
     public int DPS;
-
-
 }
