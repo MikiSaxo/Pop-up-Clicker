@@ -12,6 +12,7 @@ public class Monster : MonoBehaviour
 
     public Image ImageLife;
     public GameObject Visual;
+    public GameObject Croix;
     public Canvas Canvas;
     // Start is called before the first frame update
     //public void Awake()
@@ -31,8 +32,8 @@ public class Monster : MonoBehaviour
     }
     public void Hit(int damage)
     {
-        Visual.transform.DOComplete();
-        Visual.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0), 0.3f);
+        Croix.transform.DOComplete();
+        Croix.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0), 0.3f);
         _life -= damage;
         Updatelife();
     }
@@ -43,7 +44,6 @@ public class Monster : MonoBehaviour
     }
     public void SetMonster(MonsterInfos infos)
     {
-
         _lifeMax = infos.Life;
         _life = _lifeMax;
         Visual.GetComponent<SpriteRenderer>().sprite = infos.Sprite;

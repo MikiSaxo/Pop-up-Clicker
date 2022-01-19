@@ -17,6 +17,11 @@ public class MainGame : MonoBehaviour
     private float _timerAutoDamage = 0;
     public int damageClic = 1;
 
+    public bool isShopOpen = true;
+    public GameObject Shop;
+    public GameObject verticalScrollbar;
+    
+
     public static MainGame Instance;
 
     private void Awake()
@@ -101,5 +106,40 @@ public class MainGame : MonoBehaviour
             }
         }
 
+        if (isShopOpen && Shop.transform.localScale.x <= 0)
+        {
+            Shop.transform.DOComplete();
+            Shop.transform.DOScale(0, 0.2f).OnComplete(CloseShop);
+        }
+    }
+
+    public void OnClickOpenShop()
+    {
+        if (isShopOpen)
+        {
+            Shop.transform.DOComplete();
+            Shop.transform.DOScale(0, 0.2f).OnComplete(CloseShop);
+        }
+        else
+        {
+            
+            //Shop.SetActive(true);
+            Shop.transform.DOComplete();
+            Shop.transform.DOScale(1, 0.2f).OnComplete(OpenShop);
+            
+            //Shop.transform.DOScale(0, 0.3f).OnComplete(CloseShop);
+        }
+    } 
+
+    void CloseShop()
+    {
+        //Shop.SetActive(false);
+        isShopOpen = false;
+    }
+
+    void OpenShop()
+    {
+        float scrollValue = verticalScrollbar.GetComponent<Scrollbar>().value = 1;
+        isShopOpen = true;
     }
 }
