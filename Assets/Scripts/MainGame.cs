@@ -20,7 +20,11 @@ public class MainGame : MonoBehaviour
     public bool isShopOpen = true;
     public GameObject Shop;
     public GameObject verticalScrollbar;
-    
+
+    public Text MyMoney;
+    public int myMoney = 0;
+    private int money = 1;
+    private int moneyBoss = 0;
 
     public static MainGame Instance;
 
@@ -44,6 +48,7 @@ public class MainGame : MonoBehaviour
     private void Hits(int damage, Monster monster)
     {
         monster.Hit(damage);
+        myMoney += money;
 
         GameObject go = GameObject.Instantiate(PrefabHitPoint, monster.Canvas.transform, false);
         go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 100;
@@ -54,19 +59,27 @@ public class MainGame : MonoBehaviour
         if (monster.IsAlive()== false)
         {
             NextMonster();
+            money++;
+            moneyBoss = money * 5;
+            myMoney += moneyBoss; //pas opti
         }
 
     }
     private void HitDPS(int damage, Monster monster)
     {
         monster.Hit(damage);
+        myMoney += money;
 
         if (monster.IsAlive()== false)
         {
             NextMonster();
+            money++;
+            moneyBoss = money * 5;
+            myMoney += moneyBoss; //pas opti
         }
 
     }
+
 
     private void NextMonster()
     {
@@ -96,6 +109,8 @@ public class MainGame : MonoBehaviour
         }
 
         _timerAutoDamage += Time.deltaTime;
+
+        MyMoney.text = "" + myMoney + "$";
 
         if (_timerAutoDamage >= 1.0f)
         {

@@ -35,9 +35,9 @@ public class Monster : MonoBehaviour
         Croix.transform.DOComplete();
         Croix.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0), 0.3f);
         _life -= damage;
+        
         Updatelife();
     }
-
     public bool IsAlive()
     {
         return _life > 0;
