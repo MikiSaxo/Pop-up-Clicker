@@ -1,8 +1,10 @@
 using System;
+//using UnityEngine.Mathematics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class UpgradeUI : MonoBehaviour
 {
@@ -16,7 +18,8 @@ public class UpgradeUI : MonoBehaviour
 
     private Upgrade _upgrade;
     public UpdateClic UpgradeClic;
-    private int n = 1;
+    private int n;
+    private int m;
     //private MainGame mainGame;
 
     public void Initialize(Upgrade upgrade)
@@ -36,8 +39,6 @@ public class UpgradeUI : MonoBehaviour
             UpdateParameter();
             //ButtonCost.SetActive(false); //ça fonctionne ça
         }
-
-
     }
     public void OnClickUpdateDamage()
     {
@@ -65,24 +66,54 @@ public class UpgradeUI : MonoBehaviour
     }
     public void OnClickx1()
     {
-        if (n == 1)
-            _upgrade.Cost /= n;
-        else
-            _upgrade.Cost /= 2^n;
+        if ( n ==2 )
+        {
+            n=1;
+            //_upgrade.Cost /= Math.Pow(2,n);
+        }
+        //if (n > 1)
+        //{
+            //_upgrade.Cost /= Math.Pow(2,n);
+        //}
         n = 1;
-        _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
+        //m =_upgrade.DPS*Math.Pow(2,n-1);
+        //Debug.Log(m);
+       // _upgrade.Description = "Adds " + m + " dps";
         Initialize(_upgrade);
-//        UpdateParameter();
+        //        UpdateParameter();
     }
     public void OnClickx10()
     {
-        n = 10;
-        _upgrade.Cost *= 2^n;
-        _upgrade.Description = "Adds " + _upgrade.DPS*n + " dps";
-        //      UpdateParameter();
-        Initialize(_upgrade);
+        if(n != 5)
+        {
+            n = 5;
+            //Debug.Log(m);
+            //m =_upgrade.DPS*Math.Pow(2,n);
+            //_upgrade.Cost *= Math.Pow(2,n);
+            //_upgrade.Description = "Adds " + m + " dps";
+            //      UpdateParameter();
+            //Initialize(_upgrade);
+        }
     }
-
+   
+    public void OnClickMax()
+    {
+        //if(n > 1)
+        //{
+            //_upgrade.Cost /=Math.Pow(2,n);
+        //}
+        //n = 2;
+    }
+    private void Update()
+    {
+        //if (n==2)
+        //{
+            //for(int i =1; MainGame.Instance.myMoney >= m; i++)
+            //{
+            //     m =_upgrade.DPS*Math.Pow(2,i);
+            //}
+        //}
+    }
 }
 
 [Serializable]
