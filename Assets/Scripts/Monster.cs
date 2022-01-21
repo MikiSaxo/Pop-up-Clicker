@@ -46,7 +46,7 @@ public class Monster : MonoBehaviour
     {
         _lifeMax = infos.Life;
         _life = _lifeMax;
-        Visual.GetComponent<SpriteRenderer>().sprite = infos.Sprite;
+        //Visual.GetComponent<Image>().sprite = infos.Image;
         Updatelife();
     }
 
