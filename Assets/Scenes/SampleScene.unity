@@ -1107,6 +1107,7 @@ GameObject:
   - component: {fileID: 552510858}
   - component: {fileID: 552510857}
   - component: {fileID: 552510856}
+  - component: {fileID: 552510859}
   m_Layer: 5
   m_Name: Scroll View
   m_TagString: Untagged
@@ -1204,6 +1205,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552510854}
   m_CullTransparentMesh: 1
+--- !u!61 &552510859
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552510854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.90600586, y: 0.47963715}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 176.40741, y: 405.00262}
+  m_EdgeRadius: 0
 --- !u!1 &598764042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,8 +2715,9 @@ GameObject:
   - component: {fileID: 1603649900}
   - component: {fileID: 1603649899}
   - component: {fileID: 1603649898}
+  - component: {fileID: 1603649901}
   m_Layer: 0
-  m_Name: Monster
+  m_Name: PopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2713,6 +2741,8 @@ MonoBehaviour:
   Visual: {fileID: 745205865}
   Croix: {fileID: 521742760}
   Canvas: {fileID: 1679204902}
+  ScrollView: {fileID: 552510854}
+  canClick: 0
 --- !u!61 &1603649899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2755,6 +2785,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1603649901
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603649897}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &1607118921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,37 +2839,37 @@ MonoBehaviour:
   Monsters:
   - Name: Bob1
     Life: 10
-    Sprite: {fileID: 1678145572222517119, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob2
     Life: 20
-    Sprite: {fileID: 7914932423311075185, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob3
     Life: 30
-    Sprite: {fileID: -8683299337590412242, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob4
     Life: 40
-    Sprite: {fileID: 4801054521310352651, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob5
     Life: 50
-    Sprite: {fileID: -445974791117361388, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob6
     Life: 60
-    Sprite: {fileID: 8368917366280591927, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob7
     Life: 70
-    Sprite: {fileID: 5548384328594715658, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob8
     Life: 80
-    Sprite: {fileID: -3154089003634382593, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob9
     Life: 90
-    Sprite: {fileID: -3664205340264171017, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob10
     Life: 100
-    Sprite: {fileID: 8965785777837353009, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   - Name: bob11
     Life: 1000000000
-    Sprite: {fileID: 1384033934812410456, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Image: {fileID: 0}
   Monster: {fileID: 1603649898}
   PrefabHitPoint: {fileID: 6173749543131167822, guid: 4f9db6c1f873228419db52adcd931241, type: 3}
   PrefabUpgradeUI: {fileID: 443924058821047797, guid: 7cd94dacf634f174dbb3b20291ec2c97, type: 3}
@@ -2855,6 +2906,7 @@ MonoBehaviour:
     Cost: 1000
     DPS: 200
   damageClic: 1
+  PopUp: {fileID: 1603649897}
   isShopOpen: 1
   Shop: {fileID: 256726777}
   verticalScrollbar: {fileID: 883284449}

@@ -8,6 +8,13 @@ public class TaskBarCommands : MonoBehaviour
     public GameObject MenuNotifs;
     public bool isNotifOpen;
 
+    public static TaskBarCommands Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public void OnClickOpenNotifs()
     {
         if (isNotifOpen)
