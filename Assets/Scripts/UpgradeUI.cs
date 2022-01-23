@@ -51,7 +51,7 @@ public class UpgradeUI : MonoBehaviour
                 //OnClickx1();
                 OnClickx10();
             }
-            else if (n == 1)
+            else if (n == 0)
             {
                 m++;
                 _upgrade.DPS += 2;
@@ -124,17 +124,18 @@ public class UpgradeUI : MonoBehaviour
         oldCost = _upgrade.Cost;
         while (oldCost <= MainGame.Instance.myMoney)
         {
-            _upgrade.Cost += initCost;
-            oldCost += _upgrade.Cost;
-            n++;
+             _upgrade.Cost += initCost;
+             oldCost += _upgrade.Cost;
+             n++;
         }
-        if(n != 0)
+        
+        if(n > 0)
         {
-            oldCost -= initCost * (n+1);
-            Debug.Log(n);
-            Debug.Log(oldCost);
-            _upgrade.Cost = oldCost;
-        }
+             oldCost -= initCost * (n + 1);
+             Debug.Log(n);
+             Debug.Log(oldCost);
+             _upgrade.Cost = oldCost;
+        }      
         else
             OnClickx1();
 
