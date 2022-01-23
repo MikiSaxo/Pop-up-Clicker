@@ -2924,7 +2924,7 @@ MonoBehaviour:
   Shop: {fileID: 256726777}
   verticalScrollbar: {fileID: 883284449}
   MyMoney: {fileID: 1742789922}
-  myMoney: 0
+  myMoney: 92
 --- !u!4 &1607118923
 Transform:
   m_ObjectHideFlags: 0

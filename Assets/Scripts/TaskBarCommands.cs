@@ -25,7 +25,6 @@ public class TaskBarCommands : MonoBehaviour
         }
         else
         {
-
             //Shop.SetActive(true);
             MenuNotifs.transform.DOComplete();
             MenuNotifs.transform.DOMoveX(0, 1);

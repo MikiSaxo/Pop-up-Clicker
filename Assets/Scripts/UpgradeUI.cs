@@ -20,8 +20,13 @@ public class UpgradeUI : MonoBehaviour
     public UpdateClic UpgradeClic;
     private int n;
     private int m;
+    private int oldCost;
+    private bool onClickMax = false;
     //private MainGame mainGame;
-
+    private void Start()
+    {
+        
+    }
     public void Initialize(Upgrade upgrade)
     {
         _upgrade = upgrade;
@@ -75,7 +80,8 @@ public class UpgradeUI : MonoBehaviour
     {
         if ( n !=0 )
         {
-            oldCost/= (int)Math.Round(Math.Pow(2, n));
+            //onClickMax = false;
+            oldCost /= (int)Math.Round(Math.Pow(2, n));
             _upgrade.Cost = oldCost;
             n = 0;
         //    n=1;
@@ -94,46 +100,75 @@ public class UpgradeUI : MonoBehaviour
     }
 
 
-    int oldCost = 0;//test 
     public void OnClickx10()
     {
         
-        ////_upgrade.Cost = ((_upgrade.Cost * 1) * (_upgrade.Cost * 5)) / 2;
         if (n != 10)
         {
+            //onClickMax = false;
             n = 10;
             oldCost = _upgrade.Cost;
-            //_upgrade.Cost = ((_upgrade.Cost * n) * (_upgrade.Cost * n + 1))/2;
+
             for (int i = 1; i < n+1; i++)
             {
-                
                 oldCost += _upgrade.Cost;
                 _upgrade.Cost *= 2;
-                //_upgrade.Cost *= (int)Math.Round(Math.Pow(2, n));
-                //_upgrade.Cost = ((_upgrade.Cost * i) * (_upgrade.Cost * i + 1)) / 2;
             }
             _upgrade.Cost -= oldCost/ (int)Math.Round(Math.Pow(2, n));
-        //_upgrade.Cost -= _upgrade.Cost/(int)Math.Round(Math.Pow(2, n));
-        //            m = _upgrade.DPS * (int)Math.Round(Math.Pow(2, n));
 
-        //            _upgrade.Description = "Adds " + m + " dps";
-        //UpdateParameter();
-        //Initialize(_upgrade);
+            Debug.Log(oldCost);
+            //oldCost = _upgrade.Cost;
         }
         Initialize(_upgrade);
     }
    
     public void OnClickMax()
     {
-        //if (n > 1)
+        //Debug.Log(_upgrade.Cost + _upgrade.Cost * (int)Math.Round(Math.Pow(2, 1)));
+        oldCost = _upgrade.Cost;
+
+        //    oldCost = _upgrade.Cost;
+            n =5;
+        Debug.Log(_upgrade.Cost);
+        //onClickMax = true;
+        for (int i = 1;i<n+1; i++)
+            {
+            //n++;
+            oldCost += _upgrade.Cost;
+            _upgrade.Cost *= 2;
+            }
+            _upgrade.Cost -= oldCost / (int)Math.Round(Math.Pow(2, n));
+        Initialize(_upgrade);
+
+        //oldCost /= (int)Math.Round(Math.Pow(2, n));//for (int i = 1;i<n+2; i++) il faut le n et pas le n+1 donc la le n+1 car il y a n+2
+        //oldCost= _upgrade.Cost / (int)Math.Round(Math.Pow(2, n));
+
+        //oldCost= _upgrade.Cost / (int)Math.Round(Math.Pow(2, n));
+        //_upgrade.Cost -= oldCost / (int)Math.Round(Math.Pow(2, n));
+        //if (MainGame.Instance.myMoney > _upgrade.Cost * (int)Math.Round(Math.Pow(2, n + 1)))
         //{
-        //    _upgrade.Cost /= (int)Math.Round(Math.Pow(2, n));
+        //    n++;
+        //    oldCost += _upgrade.Cost;
+        //    _upgrade.Cost *= 2;
         //}
-        //n = 2;
+
+
+
     }
+
+
     private void Update()
     {
-//        Debug.Log(n);
+        //if (onClickMax == true)
+        //{
+        //    n = 1;
+        //    if (MainGame.Instance.myMoney > _upgrade.Cost * (int)Math.Round(Math.Pow(2, n + 1)))
+        //    {
+        //        n++;
+        //    }
+        //}
+        //Debug.Log(onClickMax);
+        //Debug.Log(61f/7f);
         //Debug.Log(oldCost);
         //if (n == 2)
         //{
