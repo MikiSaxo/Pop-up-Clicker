@@ -16,6 +16,7 @@ public class MainGame : MonoBehaviour
     private List<Upgrade> _unlockedUpgrades = new List<Upgrade>();
     private float _timerAutoDamage = 0;
     public int damageClic = 1;
+    public GameObject PopUp;
 
     public bool isShopOpen = true;
     public GameObject Shop;
@@ -27,6 +28,7 @@ public class MainGame : MonoBehaviour
     private int moneyBoss = 0;
 
     public static MainGame Instance;
+
 
     private void Awake()
     {
@@ -42,6 +44,7 @@ public class MainGame : MonoBehaviour
             GameObject go = GameObject.Instantiate(PrefabUpgradeUI, ParentUprades.transform, false);
             go.transform.localPosition = Vector3.zero;
             go.GetComponent<UpgradeUI>().Initialize(upgrade);
+            go.GetComponent<UpgradeUI>().GetValue(upgrade);
         }
     }
 
@@ -92,18 +95,20 @@ public class MainGame : MonoBehaviour
         _unlockedUpgrades.Add(upgrade);
     }
 
+   
+
     void Update()
     {
-        
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 world = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(world, Vector2.zero);
-            if (hit.collider!= null)
+            if (hit.collider.name == "PopUp" && Monster.Instance.canClick)
             {
-               
+                Debug.Log(hit.collider.name);
                 Monster monster = hit.collider.GetComponent<Monster>();
-                Hits(damageClic, Monster);                
+                Hits(damageClic, Monster);
             }
 
         }

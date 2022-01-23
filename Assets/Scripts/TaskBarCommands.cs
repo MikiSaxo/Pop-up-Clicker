@@ -8,6 +8,13 @@ public class TaskBarCommands : MonoBehaviour
     public GameObject MenuNotifs;
     public bool isNotifOpen;
 
+    public static TaskBarCommands Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public void OnClickOpenNotifs()
     {
         if (isNotifOpen)
@@ -18,7 +25,6 @@ public class TaskBarCommands : MonoBehaviour
         }
         else
         {
-
             //Shop.SetActive(true);
             MenuNotifs.transform.DOComplete();
             MenuNotifs.transform.DOMoveX(0, 1);

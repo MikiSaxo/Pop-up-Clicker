@@ -14,15 +14,40 @@ public class Monster : MonoBehaviour
     public GameObject Visual;
     public GameObject Croix;
     public Canvas Canvas;
-    // Start is called before the first frame update
-    //public void Awake()
-    //{
-    //    _life = _lifeMax;
 
-    //    Updatelife();
-    //}
+    public Image image;
+    public Sprite sprite;
 
-    // Update is called once per frame
+    public GameObject ScrollView;
+    //public BoxCollider2D m_BoxCollider;
+    public bool canClick;
+
+    public static Monster Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject == ScrollView)
+        {
+            canClick = false;
+            Debug.Log("canClick Monster = " + canClick);
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject == ScrollView)
+        {
+            canClick = true;
+            Debug.Log("canClick Monster = " + canClick);
+        }
+    }
+
     public void Updatelife()
     {
         Textlife.text = $"{_life}/{_lifeMax}";
@@ -46,6 +71,7 @@ public class Monster : MonoBehaviour
     {
         _lifeMax = infos.Life;
         _life = _lifeMax;
+        image.sprite = infos.sprite;
         //Visual.GetComponent<Image>().sprite = infos.Image;
         Updatelife();
     }
