@@ -44,6 +44,7 @@ public class MainGame : MonoBehaviour
             GameObject go = GameObject.Instantiate(PrefabUpgradeUI, ParentUprades.transform, false);
             go.transform.localPosition = Vector3.zero;
             go.GetComponent<UpgradeUI>().Initialize(upgrade);
+            go.GetComponent<UpgradeUI>().GetValue(upgrade);
         }
     }
 
