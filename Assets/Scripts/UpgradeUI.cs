@@ -83,10 +83,11 @@ public class UpgradeUI : MonoBehaviour
  
     public void OnClickx1()
     {
+        //Debug.Log(m);
         _upgrade.Cost = initCost * m;
         n = 0;
-
-        Debug.Log(oldCost);
+        oldCost = _upgrade.Cost;
+        //Debug.Log(initCost);
 
         Initialize(_upgrade);
 
@@ -101,11 +102,11 @@ public class UpgradeUI : MonoBehaviour
         {
             //onClickMax = false;
             n = 10;
-            oldCost = _upgrade.Cost;
+            //oldCost = _upgrade.Cost;
 
             for (int i = 1; i < n; i++)
             {
-                _upgrade.Cost += initCost;
+                _upgrade.Cost += initCost*m;
                 oldCost += _upgrade.Cost;
                 //_upgrade.Cost = oldCost;
                 Debug.Log(oldCost);
@@ -120,21 +121,42 @@ public class UpgradeUI : MonoBehaviour
     public void OnClickxMax()
     {
         OnClickx1();
-        n = 0;
-        oldCost = _upgrade.Cost;
+        n = 1;//pas touche sinon tout cassé :c
+        //oldCost = _upgrade.Cost;
+        Debug.Log(oldCost);
+        Debug.Log(_upgrade.Cost);
+        Debug.Log(initCost);
         while (oldCost <= MainGame.Instance.myMoney)
         {
+            
              _upgrade.Cost += initCost;
              oldCost += _upgrade.Cost;
+            //if (oldCost< MainGame.Instance.myMoney)
              n++;
+            //else
+            //{
+            //oldCost -= _upgrade.Cost;
+            //}
         }
+            Debug.Log(oldCost);
+            Debug.Log(_upgrade.Cost);
+            Debug.Log(MainGame.Instance.myMoney);
         
-        if(n > 0)
+        if(n > 1)
         {
-             oldCost -= initCost * (n + 1);
-             Debug.Log(n);
+            if (m==1)
+                oldCost -= initCost * (n);//m=1 it's good
+            else
+            {
+                oldCost -= _upgrade.Cost;
+            }
+            //oldCost -= initCost * (n+1);
+            Debug.Log(n);
+             Debug.Log(m);
              Debug.Log(oldCost);
+             Debug.Log(_upgrade.Cost);
              _upgrade.Cost = oldCost;
+
         }      
         else
             OnClickx1();
