@@ -33,11 +33,11 @@ public class Spawn_PopUp : MonoBehaviour
     public void HasClickCroix()
     {
         Debug.Log("a cliqué");
-        Hits(damageOnClick, PopUp_Script);
+        Hits(damageOnClick);//, PopUp_Script);
         money++;
     }
 
-    public void Hits(int damage, PopUp_Script popUp_Script)
+    public void Hits(int damage)//, PopUp_Script popUp_Script)
     {
         Debug.Log("Lance le Hit dans le script popup_script");
         PopUp_Script.Instance.Hit(damage);
