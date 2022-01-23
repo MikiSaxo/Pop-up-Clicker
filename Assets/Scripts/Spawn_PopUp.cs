@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Spawn_PopUp : MonoBehaviour
 {
     public GameObject PopUp;
+    public GameObject SpawnPlace;
     public PopUp_Script PopUp_Script;
     public int money;
     public Text moneyText;
@@ -19,6 +20,9 @@ public class Spawn_PopUp : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        //GameObject go = GameObject.Instantiate(PopUp, SpawnPlace.transform, false);
+        //go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 3;
+        SpawnNewPopUp();
     }
 
     private void Update()
@@ -30,11 +34,23 @@ public class Spawn_PopUp : MonoBehaviour
     {
         Debug.Log("a cliqué");
         Hits(damageOnClick, PopUp_Script);
+        money++;
     }
 
     public void Hits(int damage, PopUp_Script popUp_Script)
     {
         Debug.Log("Lance le Hit dans le script popup_script");
-        popUp_Script.Hit(damage);
+        PopUp_Script.Instance.Hit(damage);
+        //popUp_Script.Hit(damage);
+        money++;
+    }
+
+    public void SpawnNewPopUp()
+    {
+        Debug.Log("Spawn New PopUp");
+        money += 10;
+        GameObject go = GameObject.Instantiate(PopUp, SpawnPlace.transform, false);
+        go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
+        //go.transform.localScale = new Vector3(30, 30, 30);
     }
 }

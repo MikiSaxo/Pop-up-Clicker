@@ -56,6 +56,7 @@ public class PopUp_Script : MonoBehaviour
 
     public void GoDestroy()
     {
+        Spawn_PopUp.Instance.SpawnNewPopUp();
         Destroy(gameObject);
     }
 }

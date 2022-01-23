@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 0}
-  _lifeMax: 3
+  _lifeMax: 6
   Textlife: {fileID: 1926898789679521648}
   ImageLife: {fileID: 1926898788979522175}
   Croix: {fileID: 1926898788418311390}
