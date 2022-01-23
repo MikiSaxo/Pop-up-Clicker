@@ -3920,6 +3920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopUp: {fileID: 1926898789522691503, guid: cc09dda773b534041ba1d4bb7d91852e, type: 3}
+  SpawnPlace: {fileID: 0}
   PopUp_Script: {fileID: 660512278}
   money: 1
   moneyText: {fileID: 1852290979}
