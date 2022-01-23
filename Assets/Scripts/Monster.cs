@@ -15,6 +15,9 @@ public class Monster : MonoBehaviour
     public GameObject Croix;
     public Canvas Canvas;
 
+    public Image image;
+    public Sprite sprite;
+
     public GameObject ScrollView;
     //public BoxCollider2D m_BoxCollider;
     public bool canClick;
@@ -31,7 +34,7 @@ public class Monster : MonoBehaviour
         if (collision.gameObject == ScrollView)
         {
             canClick = false;
-            Debug.Log("canClick = " + canClick);
+            Debug.Log("canClick Monster = " + canClick);
         }
 
     }
@@ -41,7 +44,7 @@ public class Monster : MonoBehaviour
         if (collision.gameObject == ScrollView)
         {
             canClick = true;
-            Debug.Log("canClick = " + canClick);
+            Debug.Log("canClick Monster = " + canClick);
         }
     }
 
@@ -68,6 +71,7 @@ public class Monster : MonoBehaviour
     {
         _lifeMax = infos.Life;
         _life = _lifeMax;
+        image.sprite = infos.sprite;
         //Visual.GetComponent<Image>().sprite = infos.Image;
         Updatelife();
     }
