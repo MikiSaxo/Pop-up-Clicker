@@ -78,11 +78,11 @@ public class UpgradeUI : MonoBehaviour
             //ButtonCost.SetActive(false); //ça fonctionne ça
         }
     }
-    public void OnClickUpdateDamage()
+    /*public void OnClickUpdateDamage()
     {
-        MainGame.Instance.damageClic += 1; //a modif
+        MainGame.Instance.damageOnClick += 1; //a modif
 
-    }
+    }*/
  
     public void OnClickx1()
     {
@@ -109,7 +109,7 @@ public class UpgradeUI : MonoBehaviour
             {
                 _upgrade.Cost += initCost * m;
                 oldCost += _upgrade.Cost;
-                Debug.Log(oldCost);
+                //Debug.Log(oldCost);
             }
             _upgrade.Cost = oldCost;
         }

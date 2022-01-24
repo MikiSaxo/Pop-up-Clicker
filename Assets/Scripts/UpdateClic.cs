@@ -11,7 +11,7 @@ public class UpdateClic : MonoBehaviour
 
     public void Update()
     {
-        TextDamageClic.text = "" + MainGame.Instance.damageClic;
+        TextDamageClic.text = "" + Spawn_PopUp.Instance.damageOnClick;
     }
 
 }

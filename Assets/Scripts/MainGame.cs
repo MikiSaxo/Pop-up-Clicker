@@ -13,10 +13,8 @@ public class MainGame : MonoBehaviour
     public GameObject ParentUprades;
     private int _currentMonster;
     public List<Upgrade> Upgrades;
-    private List<Upgrade> _unlockedUpgrades = new List<Upgrade>();
+    public List<Upgrade> _unlockedUpgrades = new List<Upgrade>();
     private float _timerAutoDamage = 0;
-    public int damageClic = 1;
-    public GameObject PopUp;
 
     public bool isShopOpen = true;
     public GameObject Shop;
@@ -100,7 +98,7 @@ public class MainGame : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             Vector3 world = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(world, Vector2.zero);
@@ -111,11 +109,11 @@ public class MainGame : MonoBehaviour
                 Hits(damageClic, Monster);
             }
 
-        }
-
-        _timerAutoDamage += Time.deltaTime;
+        }*/
 
         //MyMoney.text = "" + myMoney + "$";
+
+        _timerAutoDamage += Time.deltaTime;
 
         if (_timerAutoDamage >= 1.0f)
         {
