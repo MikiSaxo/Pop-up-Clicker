@@ -115,6 +115,8 @@ public class UpgradeUI : MonoBehaviour
    
     public void OnClickxMax()
     {
+        Debug.Log(MainGame.Instance.myMoney);
+        Debug.Log(_upgrade.Cost);
         OnClickx1();
         n = 1;//pas touche sinon tout cassé :c
         while (oldCost <= MainGame.Instance.myMoney)

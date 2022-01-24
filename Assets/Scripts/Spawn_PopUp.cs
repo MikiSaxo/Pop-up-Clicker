@@ -8,8 +8,8 @@ public class Spawn_PopUp : MonoBehaviour
     public GameObject PopUp;
     public GameObject SpawnPlace;
     public PopUp_Script PopUp_Script;
-    public int money;
-    public Text moneyText;
+    //public int money;
+    //public Text moneyText;
     public int _lifeOfPopUp;
     public int damageOnClick;
     public List<Sprite> popUpSprites;
@@ -27,14 +27,14 @@ public class Spawn_PopUp : MonoBehaviour
 
     private void Update()
     {
-        moneyText.text = "" + money + "$";
+        MainGame.Instance.MyMoney.text = "" + MainGame.Instance.myMoney + "$";
     }
 
     public void HasClickCroix()
     {
         Debug.Log("a cliqué");
         Hits(damageOnClick);//, PopUp_Script);
-        money++;
+        MainGame.Instance.myMoney++;
     }
 
     public void Hits(int damage)//, PopUp_Script popUp_Script)
@@ -42,13 +42,13 @@ public class Spawn_PopUp : MonoBehaviour
         Debug.Log("Lance le Hit dans le script popup_script");
         PopUp_Script.Instance.Hit(damage);
         //popUp_Script.Hit(damage);
-        money++;
+        MainGame.Instance.myMoney++;
     }
 
     public void SpawnNewPopUp()
     {
         Debug.Log("Spawn New PopUp");
-        money += 10;
+        MainGame.Instance.myMoney += 10;
         GameObject go = GameObject.Instantiate(PopUp, SpawnPlace.transform, false);
         go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
         //go.transform.localScale = new Vector3(30, 30, 30);
