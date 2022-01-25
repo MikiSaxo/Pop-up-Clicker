@@ -90,7 +90,16 @@ public class MainGame : MonoBehaviour
 
     public void AddUpgrade(Upgrade upgrade)
     {
-        _unlockedUpgrades.Add(upgrade);
+        var i = 0;
+        while (upgrade != _unlockedUpgrades[i])
+        {
+            i++;
+            if (i == _unlockedUpgrades.Count)
+            {
+                _unlockedUpgrades.Add(upgrade);
+                break;
+            }
+        }
     }
 
    

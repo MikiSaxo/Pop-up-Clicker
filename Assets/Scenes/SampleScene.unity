@@ -736,7 +736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000012581458}
+  m_AnchoredPosition: {x: 0, y: 0.00012758138}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &352276157
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1660570109}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.92102116
+  m_Size: 0.921021
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2359,7 +2359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 103806.73, y: 1827867.1}
+  m_AnchoredPosition: {x: 108941.83, y: 1916036.2}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -3173,12 +3173,17 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: eab6c6a3a5015aa46b775cffa538814b, type: 3}
     Cost: 1000
     DPS: 500
-  _unlockedUpgrades: []
+  _unlockedUpgrades:
+  - Name: 
+    Description: 
+    Sprite: {fileID: 0}
+    Cost: 0
+    DPS: 0
   isShopOpen: 0
   Shop: {fileID: 256726777}
   verticalScrollbar: {fileID: 883284449}
   MyMoney: {fileID: 1742789922}
-  myMoney: 0
+  myMoney: 68
 --- !u!4 &1607118923
 Transform:
   m_ObjectHideFlags: 0
@@ -3831,8 +3836,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1648210077}
   m_HandleRect: {fileID: 1648210076}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.99992853
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3994,6 +3999,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777fb0265edd239468ba2a7b3bb83e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _upgrade:
+    Name: 
+    Description: 
+    Sprite: {fileID: 0}
+    Cost: 0
+    DPS: 0
   PopUp: {fileID: 1926898789522691503, guid: cc09dda773b534041ba1d4bb7d91852e, type: 3}
   PopUpBoss: {fileID: 1585218695904448729, guid: a66d6864fcc4d79488c182a04b9fd8a7, type: 3}
   SpawnPlace:
@@ -4016,6 +4027,7 @@ MonoBehaviour:
   _listSpecialPopUp:
   - {fileID: 0}
   addMoney: 1
+  addDPS: 0
   whichWave: 0
   howManyDied: 0
   isBoss: 0
