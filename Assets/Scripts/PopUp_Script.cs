@@ -92,7 +92,7 @@ public class PopUp_Script : MonoBehaviour
         Croix.transform.DOComplete();
         Croix.transform.DOPunchScale(new Vector3(0.01f, 0.01f, 0), 0.3f);
         _life -= damage;
-        MainGame.Instance.myMoney++;
+        MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney;
 
         if (_life <= 0)
         {
@@ -105,6 +105,7 @@ public class PopUp_Script : MonoBehaviour
 
     public void GoDestroy()
     {
+        MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 10;
         Spawn_PopUp.Instance.LanceSpawn();
         Destroy(gameObject);
     }

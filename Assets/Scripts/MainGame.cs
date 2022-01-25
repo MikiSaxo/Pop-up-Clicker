@@ -46,7 +46,7 @@ public class MainGame : MonoBehaviour
         }
     }
 
-    private void Hits(int damage, Monster monster)
+    /*private void Hits(int damage, Monster monster)
     {
         monster.Hit(damage);
         //myMoney += money;
@@ -57,16 +57,16 @@ public class MainGame : MonoBehaviour
         go.GetComponent<Text>().DOFade(0, 0.8f);
         GameObject.Destroy(go, 0.8f);
 
-        if (monster.IsAlive()== false)
+        /*if (monster.IsAlive()== false)
         {
             NextMonster();
             //money++;
             //moneyBoss = money * 5;
             //myMoney += moneyBoss; //pas opti
-        }
+        }*/
 
-    }
-    private void HitDPS(int damage, Monster monster)
+    //}
+    /*private void HitDPS(int damage, Monster monster)
     {
         monster.Hit(damage);
         //myMoney += money;
@@ -79,14 +79,14 @@ public class MainGame : MonoBehaviour
             //myMoney += moneyBoss; //pas opti
         }
 
-    }
+    }*/
 
 
-    private void NextMonster()
+    /*private void NextMonster()
     {
         _currentMonster++;
         Monster.SetMonster(Monsters[_currentMonster]);
-    }
+    }*/
 
     public void AddUpgrade(Upgrade upgrade)
     {
@@ -113,7 +113,7 @@ public class MainGame : MonoBehaviour
 
         //MyMoney.text = "" + myMoney + "$";
 
-        _timerAutoDamage += Time.deltaTime;
+        /*_timerAutoDamage += Time.deltaTime;
 
         if (_timerAutoDamage >= 1.0f)
         {
@@ -122,7 +122,7 @@ public class MainGame : MonoBehaviour
             {
                 HitDPS(upgrade.DPS, Monster);
             }
-        }
+        }*/
 
         if (isShopOpen && Shop.transform.localScale.x <= 0)
         {

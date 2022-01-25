@@ -7,6 +7,7 @@ using DG.Tweening;
 
 public class Spawn_PopUp : MonoBehaviour
 {
+    public Upgrade _upgrade;
     public GameObject PopUp;
     public GameObject PopUpBoss;
     public List<GameObject> SpawnPlace;
@@ -19,10 +20,13 @@ public class Spawn_PopUp : MonoBehaviour
     private float _timerAutoDamage = 0;
     public List<GameObject> _listPopUp;
     public List<GameObject> _listSpecialPopUp;
+    public int addMoney = 1;
+    public int addDPS;
 
     public int whichWave;
     public int howManyDied;
     public bool isBoss;
+    public int addWeightWave;
 
 
     public static Spawn_PopUp Instance;
@@ -35,7 +39,7 @@ public class Spawn_PopUp : MonoBehaviour
         //StartCoroutine(SpawnNewPopUp());
         //StartCoroutine(SpawnNewPopUp());
         //StartSpawnNewPopUp();
-        StartSpawnNewPopUp();
+        //StartSpawnNewPopUp();
         StartSpawnNewPopUp();
     }
 
@@ -46,13 +50,14 @@ public class Spawn_PopUp : MonoBehaviour
 
     private void Update()
     {
-        
+        //addDPS = UpgradeUI.Instance.addDPS;
+        //Debug.Log("allez addDPS " + addDPS);
         //else if (_listPopUp[2] == null)
-           // _listPopUp.RemoveAt(2);
+        // _listPopUp.RemoveAt(2);
 
-        MainGame.Instance.MyMoney.text = "" + MainGame.Instance.myMoney + "$";
+        MainGame.Instance.MyMoney.text = "" + MainGame.Instance.myMoney;// "$";
 
-        _timerAutoDamage += Time.deltaTime * 3;
+        _timerAutoDamage += Time.deltaTime;
 
         if (_timerAutoDamage >= 1.0f)
         {
@@ -61,15 +66,20 @@ public class Spawn_PopUp : MonoBehaviour
             {
                 if (_listSpecialPopUp[0] != null)
                 {
-                    _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(damageOnClick); // marche pas à cette place faut trouver autre chose
-
+                    _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(addDPS); 
                 }
                 else if (_listPopUp[0] != null)
                 {
                     Debug.Log("click auto");
-                    _listPopUp[0].GetComponent<PopUp_Script>().Hit(damageOnClick);
+                    foreach (var i in MainGame.Instance._unlockedUpgrades)
+                    {
+                        addDPS += _upgrade.DPS;
+                        Debug.Log("_upgrade.DPS " + upgrade.DPS);
+                        Debug.Log("addDPS " + addDPS);
+                    }
+                        _listPopUp[0].GetComponent<PopUp_Script>().Hit(addDPS);
                     _listPopUp[0].transform.DOMoveZ(-1, 0.1f);
-
+                    Debug.Log(UpgradeUI.Instance.addDPS);
                 }
 
             }
@@ -80,20 +90,21 @@ public class Spawn_PopUp : MonoBehaviour
     public void LanceSpawn()
     {
         howManyDied++;
-        if (howManyDied % 10 == 0)
+        if (howManyDied % (10 + addWeightWave) == 0)
         {
             whichWave++;
             _lifeOfPopUp += 10;
             UpdateWave();
             StartCoroutine(SpawnNewPopUp());
         }
-        else if (howManyDied % 5 == 0)
+        else if (howManyDied % (15 + addWeightWave) == 0)
         {
             isBoss = true;
             //_lifeOfPopUp += 100;
             //Debug.Log("allo le boss " + PopUp_Script.Instance.isBoss);
             StartCoroutine(SpawnNewPopUp());
             //_lifeOfPopUp -= 100;
+            addWeightWave += 5;
         }
         else
             StartCoroutine(SpawnNewPopUp());
@@ -107,7 +118,7 @@ public class Spawn_PopUp : MonoBehaviour
     public void StartSpawnNewPopUp()
     {
         Debug.Log("Spawn New PopUp Start");
-        MainGame.Instance.myMoney += 10;
+        
         var i = Random.Range(0, SpawnPlace.Count);
         GameObject go = GameObject.Instantiate(PopUp, SpawnPlace[i].transform, false);
         go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
@@ -117,7 +128,6 @@ public class Spawn_PopUp : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         Debug.Log("Lance Spawn New PopUp");
-        MainGame.Instance.myMoney += 10;
 
         if (_listPopUp[0] == null)
             _listPopUp.RemoveAt(0);

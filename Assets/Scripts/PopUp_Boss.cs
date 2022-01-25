@@ -61,7 +61,7 @@ public class PopUp_Boss : MonoBehaviour
         Croix.transform.DOComplete();
         Croix.transform.DOPunchScale(new Vector3(0.01f, 0.01f, 0), 0.3f);
         _life -= damage;
-        MainGame.Instance.myMoney++;
+        MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney;
 
         if (_life <= 0)
         {
@@ -74,7 +74,7 @@ public class PopUp_Boss : MonoBehaviour
 
     public void GoDestroy()
     {
-        //Spawn_PopUp.Instance.LanceSpawn();
+        MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 100;
         Destroy(gameObject);
     }
 }

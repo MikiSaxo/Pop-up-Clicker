@@ -585,6 +585,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1742789921}
+  - {fileID: 1154511059}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -658,7 +659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.399994}
+  m_AnchoredPosition: {x: 0, y: 5.700001}
   m_SizeDelta: {x: -19.82, y: -23.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273147521
@@ -962,7 +963,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BlaBlaBla
+  m_Text: 
 --- !u!222 &480144030
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2004,14 +2005,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1747063, g: 0.19619018, b: 0.24528301, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5601956c921aad747b819175e15d8c61, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2137,8 +2138,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2d5c9f43679e30744849925d11c2dd3e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2227,8 +2228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -900.23, y: -487.34}
-  m_SizeDelta: {x: 71.31, y: 72.04}
+  m_AnchoredPosition: {x: -903, y: -482.78}
+  m_SizeDelta: {x: 92.16, y: 92.163}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997638095
 MonoBehaviour:
@@ -2306,8 +2307,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d7e6571183726204cabe5d7467341b91, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2358,7 +2359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 70758.8, y: 1235567.6}
+  m_AnchoredPosition: {x: 103806.73, y: 1827867.1}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -2524,6 +2525,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114169788}
+  m_CullTransparentMesh: 1
+--- !u!1 &1154511058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154511059}
+  - component: {fileID: 1154511061}
+  - component: {fileID: 1154511060}
+  m_Layer: 5
+  m_Name: Dollars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1154511059
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154511058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 231984314}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 55, y: -489}
+  m_SizeDelta: {x: 98.36, y: 98.362}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1154511060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154511058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 70b65978d6249d1498e9598d4c19c1e2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1154511061
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154511058}
   m_CullTransparentMesh: 1
 --- !u!1 &1301020477
 GameObject:
@@ -2869,15 +2945,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a2bf46db508497a42bd45aa86d77495c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3067,42 +3143,42 @@ MonoBehaviour:
   PrefabUpgradeUI: {fileID: 443924058821047797, guid: 7cd94dacf634f174dbb3b20291ec2c97, type: 3}
   ParentUprades: {fileID: 1004252359}
   Upgrades:
-  - Name: Roseline
+  - Name: Cleaner1
     Description: Adds 1 dps
-    Sprite: {fileID: -1838724678503747833, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Sprite: {fileID: 21300000, guid: b4c5ad9c07f488e4cabdff45ae5d9b83, type: 3}
     Cost: 30
     DPS: 1
-  - Name: MicheMiche
-    Description: Adds 10 dps
-    Sprite: {fileID: 3877829352684461634, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+  - Name: Cleaner2
+    Description: Adds 2 dps
+    Sprite: {fileID: 21300000, guid: 54deb23e9a7a1d24482d7321396babb1, type: 3}
     Cost: 50
-    DPS: 10
-  - Name: Pierre
-    Description: Adds 25 dps
-    Sprite: {fileID: -7040421564613326933, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    DPS: 2
+  - Name: Cleaner3
+    Description: Adds 10 dps
+    Sprite: {fileID: 21300000, guid: f0e8f0e4d4c4e2840a2fe0137536fb08, type: 3}
     Cost: 100
-    DPS: 25
-  - Name: Jeane
-    Description: Adds 50 dps
-    Sprite: {fileID: -6883368339604643850, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    DPS: 10
+  - Name: Cleaner4
+    Description: Adds 25 dps
+    Sprite: {fileID: 21300000, guid: 9ec1555bb93e6ae418a3ea433bb4f314, type: 3}
     Cost: 250
-    DPS: 50
-  - Name: Gomart
+    DPS: 25
+  - Name: Cleaner5
     Description: Adds 100 dps
-    Sprite: {fileID: -6978437120488251390, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+    Sprite: {fileID: 21300000, guid: 9eca8369606237046969e9296e6a0cdd, type: 3}
     Cost: 500
     DPS: 100
-  - Name: BigWhale
-    Description: Adds 200 dps
-    Sprite: {fileID: 219365852601907621, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+  - Name: Cleaner6
+    Description: Adds 500 dps
+    Sprite: {fileID: 21300000, guid: eab6c6a3a5015aa46b775cffa538814b, type: 3}
     Cost: 1000
-    DPS: 200
+    DPS: 500
   _unlockedUpgrades: []
   isShopOpen: 0
   Shop: {fileID: 256726777}
   verticalScrollbar: {fileID: 883284449}
   MyMoney: {fileID: 1742789922}
-  myMoney: 350
+  myMoney: 0
 --- !u!4 &1607118923
 Transform:
   m_ObjectHideFlags: 0
@@ -3418,8 +3494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -94, y: -489}
-  m_SizeDelta: {x: 243.85, y: 69}
+  m_AnchoredPosition: {x: -272.1, y: -489}
+  m_SizeDelta: {x: 600.04, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742789922
 MonoBehaviour:
@@ -3434,7 +3510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9686275, g: 0.83921576, b: 0.24705884, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3498,8 +3574,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 728.15, y: -487.34}
-  m_SizeDelta: {x: 217.08, y: 72.04}
+  m_AnchoredPosition: {x: 736.6298, y: -487.34}
+  m_SizeDelta: {x: 234.04, y: 72.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766342224
 MonoBehaviour:
@@ -3926,7 +4002,7 @@ MonoBehaviour:
   - {fileID: 28231099}
   PopUp_Script: {fileID: 1926898789522691500, guid: cc09dda773b534041ba1d4bb7d91852e, type: 3}
   _lifeOfPopUp: 10
-  damageOnClick: 9
+  damageOnClick: 1
   popUpSprites:
   - {fileID: 7583527148191785731, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
   - {fileID: 7847075388353499186, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
@@ -3937,9 +4013,13 @@ MonoBehaviour:
   - {fileID: 5548384328594715658, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
   - {fileID: -7436731081221578389, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
   _listPopUp: []
+  _listSpecialPopUp:
+  - {fileID: 0}
+  addMoney: 1
   whichWave: 0
   howManyDied: 0
   isBoss: 0
+  addWeightWave: 0
 --- !u!4 &2051522046
 Transform:
   m_ObjectHideFlags: 0
