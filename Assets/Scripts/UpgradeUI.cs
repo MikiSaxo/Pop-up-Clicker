@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Mathematics;
-
+using DG.Tweening;
 
 public class UpgradeUI : MonoBehaviour
 {
@@ -14,7 +14,8 @@ public class UpgradeUI : MonoBehaviour
     public Text TextCost;
     
     public GameObject ButtonCost;
-
+    //public Color ColorInitial;
+    //public Color ColorAsserDeThune;
 
     private Upgrade _upgrade;
     public UpdateClic UpgradeClic;
@@ -165,8 +166,12 @@ public class UpgradeUI : MonoBehaviour
     {
         if (ClickMax)
             OnClickxMax();
-        //Spawn_PopUp.Instance.addDPS = addDPS;
-        //Debug.Log("Spawn_PopUp.Instance.addDPS " + Spawn_PopUp.Instance.addDPS);
+
+        //if (_upgrade.Cost <= MainGame.Instance.myMoney)
+        //    ButtonCost.DOColor(ColorAsserDeThune, 0.5f);
+        //else
+        //    ButtonCost.DOColor(ColorInitial, 0.5f);
+       
     }
 }
 

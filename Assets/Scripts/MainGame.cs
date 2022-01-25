@@ -115,7 +115,7 @@ public class MainGame : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("totaldps" + totalDPS);
+        //Debug.Log("totaldps" + totalDPS);
 
         /*if (Input.GetMouseButtonDown(0))
         {
