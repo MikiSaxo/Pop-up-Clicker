@@ -80,7 +80,7 @@ public class UpgradeUI : MonoBehaviour
                 OnClickxMax();
             }
 
-            addDPS = _upgrade.DPS;
+            //addDPS = _upgrade.DPS;
             //Debug.Log("je veux addDPS svp " + addDPS);
 
             _upgrade.Description = "Adds " + _upgrade.DPS + " dps";

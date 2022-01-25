@@ -50,6 +50,7 @@ public class Spawn_PopUp : MonoBehaviour
 
     private void Update()
     {
+
         //addDPS = UpgradeUI.Instance.addDPS;
         //Debug.Log("allez addDPS " + addDPS);
         //else if (_listPopUp[2] == null)
@@ -66,18 +67,16 @@ public class Spawn_PopUp : MonoBehaviour
             {
                 if (_listSpecialPopUp[0] != null)
                 {
-                    _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(addDPS); 
+                    _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(upgrade.DPS); 
                 }
                 else if (_listPopUp[0] != null)
                 {
                     Debug.Log("click auto");
-                    foreach (var i in MainGame.Instance._unlockedUpgrades)
-                    {
-                        addDPS += _upgrade.DPS;
-                        Debug.Log("_upgrade.DPS " + upgrade.DPS);
-                        Debug.Log("addDPS " + addDPS);
-                    }
-                        _listPopUp[0].GetComponent<PopUp_Script>().Hit(addDPS);
+                    //foreach (var i in MainGame.Instance._unlockedUpgrades)
+                    //{
+                    _listPopUp[0].GetComponent<PopUp_Script>().Hit(upgrade.DPS);
+                    Debug.Log("UpgradeUI.Instance.initUpgrade" + UpgradeUI.Instance.initUpgrade);
+                    //}
                     _listPopUp[0].transform.DOMoveZ(-1, 0.1f);
                     Debug.Log(UpgradeUI.Instance.addDPS);
                 }
