@@ -24,6 +24,7 @@ public class MainGame : MonoBehaviour
     public int myMoney = 0;
     //private int money = 1;
     //private int moneyBoss = 0;
+    public int totalDPS;
 
     public static MainGame Instance;
 
@@ -114,6 +115,7 @@ public class MainGame : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("totaldps" + totalDPS);
 
         /*if (Input.GetMouseButtonDown(0))
         {

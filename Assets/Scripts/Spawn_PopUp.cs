@@ -21,7 +21,7 @@ public class Spawn_PopUp : MonoBehaviour
     public List<GameObject> _listPopUp;
     public List<GameObject> _listSpecialPopUp;
     public int addMoney = 1;
-    public int addDPS;
+    //public int addDPS;
 
     public int whichWave;
     public int howManyDied;
@@ -63,25 +63,25 @@ public class Spawn_PopUp : MonoBehaviour
         if (_timerAutoDamage >= 1.0f)
         {
             _timerAutoDamage = 0;
-            foreach (var upgrade in MainGame.Instance._unlockedUpgrades)
+            //foreach (var upgrade in MainGame.Instance._unlockedUpgrades)
+            //{
+            if (_listSpecialPopUp[0] != null)
             {
-                if (_listSpecialPopUp[0] != null)
-                {
-                    _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(upgrade.DPS); 
-                }
-                else if (_listPopUp[0] != null)
-                {
-                    Debug.Log("click auto");
-                    //foreach (var i in MainGame.Instance._unlockedUpgrades)
-                    //{
-                    _listPopUp[0].GetComponent<PopUp_Script>().Hit(upgrade.DPS);
-                    Debug.Log("UpgradeUI.Instance.initUpgrade" + UpgradeUI.Instance.initUpgrade);
-                    //}
-                    _listPopUp[0].transform.DOMoveZ(-1, 0.1f);
-                    Debug.Log(UpgradeUI.Instance.addDPS);
-                }
-
+                _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(MainGame.Instance.totalDPS); 
             }
+            else if (_listPopUp[0] != null)
+            {
+                Debug.Log("click auto");
+                //foreach (var i in MainGame.Instance._unlockedUpgrades)
+                //{
+                _listPopUp[0].GetComponent<PopUp_Script>().Hit(MainGame.Instance.totalDPS);
+                Debug.Log("UpgradeUI.Instance.initUpgrade" + UpgradeUI.Instance.initUpgrade);
+                //}
+                _listPopUp[0].transform.DOMoveZ(-1, 0.1f);
+                //Debug.Log(UpgradeUI.Instance.addDPS);
+            }
+
+            //}
         }
     }
 

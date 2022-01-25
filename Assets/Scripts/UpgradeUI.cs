@@ -24,7 +24,7 @@ public class UpgradeUI : MonoBehaviour
     private int initCost;
     private bool ClickMax = false;
     public int initUpgrade;
-    public int addDPS;
+    //public int totalDPS;
 
     public static UpgradeUI Instance;
 
@@ -59,6 +59,7 @@ public class UpgradeUI : MonoBehaviour
             if (n == 10)
             {
                 m += 10;
+                MainGame.Instance.totalDPS += _upgrade.DPS;
                 _upgrade.DPS += initUpgrade * 10;
 
 
@@ -68,15 +69,16 @@ public class UpgradeUI : MonoBehaviour
             {
                 ClickMax = false;
                 m++;
+                Debug.Log("DPS" + _upgrade.DPS);
+                MainGame.Instance.totalDPS += _upgrade.DPS;
                 _upgrade.DPS += initUpgrade;
                 _upgrade.Cost += initCost;
             }
             else
             {
-                
+                MainGame.Instance.totalDPS += _upgrade.DPS;
                 m += n - 1;
                 _upgrade.DPS += initUpgrade * n - 1;
-                
                 OnClickxMax();
             }
 
@@ -163,9 +165,8 @@ public class UpgradeUI : MonoBehaviour
     {
         if (ClickMax)
             OnClickxMax();
-        Debug.Log("je veux addDPS svp mais dans l'update " + addDPS);
-        Spawn_PopUp.Instance.addDPS = addDPS;
-        Debug.Log("Spawn_PopUp.Instance.addDPS " + Spawn_PopUp.Instance.addDPS);
+        //Spawn_PopUp.Instance.addDPS = addDPS;
+        //Debug.Log("Spawn_PopUp.Instance.addDPS " + Spawn_PopUp.Instance.addDPS);
     }
 }
 
