@@ -91,13 +91,21 @@ public class MainGame : MonoBehaviour
     public void AddUpgrade(Upgrade upgrade)
     {
         var i = 0;
-        while (upgrade != _unlockedUpgrades[i])
+        if (_unlockedUpgrades.Count == 0)
         {
-            i++;
-            if (i == _unlockedUpgrades.Count)
+            _unlockedUpgrades.Add(upgrade);
+        }
+        else
+        {
+            while (upgrade != _unlockedUpgrades[i])
             {
-                _unlockedUpgrades.Add(upgrade);
-                break;
+                i++;
+                if (i == _unlockedUpgrades.Count)
+                {
+                    _unlockedUpgrades.Add(upgrade);
+                    break;
+                }
+
             }
         }
     }
