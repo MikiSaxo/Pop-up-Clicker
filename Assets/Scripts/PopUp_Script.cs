@@ -41,8 +41,8 @@ public class PopUp_Script : MonoBehaviour
             _life = _lifeMax;
             Updatelife();
         }
-        else
-         {
+        /*else
+        {
              Debug.Log("bonjour c'est le boss");
              m_Sprite = Spawn_PopUp.Instance.popUpSprites[0];
              ImagePopUp.sprite = m_Sprite;
@@ -52,7 +52,7 @@ public class PopUp_Script : MonoBehaviour
              isBoss = false;
              Spawn_PopUp.Instance._lifeOfPopUp -= 100;
              Spawn_PopUp.Instance.isBoss = false;
-        }
+        }*/
     }
 
     public void OnClickCroix()
