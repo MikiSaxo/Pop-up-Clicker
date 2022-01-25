@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: cae52200a19137e4095f3d68ca0a79ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7127196765886375475
+    second: Sans-titre---1_0
+  - first:
+      213: -4008160880392282330
+    second: Sans-titre---1_1
+  - first:
+      213: -2943924474648784008
+    second: Sans-titre---1_2
+  - first:
+      213: -8066948331850967007
+    second: Sans-titre---1_3
+  - first:
+      213: 6233392337620939477
+    second: Sans-titre---1_4
+  - first:
+      213: 6901609721944564910
+    second: Sans-titre---1_5
+  - first:
+      213: -7842658496781675561
+    second: Sans-titre---1_6
+  - first:
+      213: -6290515085033449165
+    second: Sans-titre---1_7
+  - first:
+      213: -8945851588959505942
+    second: Sans-titre---1_8
+  - first:
+      213: -5416985746335278618
+    second: Sans-titre---1_9
+  - first:
+      213: -1672661012024883843
+    second: Sans-titre---1_10
+  - first:
+      213: -7273462854947013981
+    second: Sans-titre---1_11
+  - first:
+      213: 9054231278882637175
+    second: Sans-titre---1_12
+  - first:
+      213: -4943754071414436104
+    second: Sans-titre---1_13
+  - first:
+      213: 9064214892100252716
+    second: Sans-titre---1_14
+  - first:
+      213: 6963874282508648466
+    second: Sans-titre---1_15
+  - first:
+      213: 7685140995860400030
+    second: Sans-titre---1_16
+  - first:
+      213: -3496666642293489937
+    second: Sans-titre---1_17
+  - first:
+      213: -8927723939392299360
+    second: Sans-titre---1_18
+  - first:
+      213: 470300869172974381
+    second: Sans-titre---1_19
+  - first:
+      213: 1704662548925996675
+    second: Sans-titre---1_20
+  - first:
+      213: 3721730225384917572
+    second: Sans-titre---1_21
+  - first:
+      213: 1347048553346694808
+    second: Sans-titre---1_22
+  - first:
+      213: 2718500950499044005
+    second: Sans-titre---1_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sans-titre---1_0
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 6600
+        width: 917
+        height: 1285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9970d8d4c171d90800000000000000
+      internalID: -7127196765886375475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_1
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 6588
+        width: 917
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fd9995ae62068c0800000000000000
+      internalID: -4008160880392282330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_2
+      rect:
+        serializedVersion: 2
+        x: 4115
+        y: 6588
+        width: 914
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8731bf2b9441527d0800000000000000
+      internalID: -2943924474648784008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_3
+      rect:
+        serializedVersion: 2
+        x: 5213
+        y: 6588
+        width: 914
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128d7929b317c0090800000000000000
+      internalID: -8066948331850967007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 5291
+        width: 885
+        height: 867
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2b98d1e45718650800000000000000
+      internalID: 6233392337620939477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_5
+      rect:
+        serializedVersion: 2
+        x: 3037
+        y: 5291
+        width: 883
+        height: 867
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea463eec97177cf50800000000000000
+      internalID: 6901609721944564910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_6
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 5291
+        width: 883
+        height: 867
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d311ac36a7492390800000000000000
+      internalID: -7842658496781675561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_7
+      rect:
+        serializedVersion: 2
+        x: 5233
+        y: 5291
+        width: 886
+        height: 867
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3395856dbd993b8a0800000000000000
+      internalID: -6290515085033449165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_8
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 3830
+        width: 882
+        height: 1051
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae174b28063f9d380800000000000000
+      internalID: -8945851588959505942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_9
+      rect:
+        serializedVersion: 2
+        x: 3037
+        y: 3830
+        width: 883
+        height: 1051
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9d4540a2003d4b0800000000000000
+      internalID: -5416985746335278618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_10
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 3830
+        width: 883
+        height: 1051
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d758c94fba389c8e0800000000000000
+      internalID: -1672661012024883843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_11
+      rect:
+        serializedVersion: 2
+        x: 5236
+        y: 3830
+        width: 883
+        height: 1051
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa72e3e1187f0b90800000000000000
+      internalID: -7273462854947013981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_12
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 2631
+        width: 852
+        height: 851
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775c704706717ad70800000000000000
+      internalID: 9054231278882637175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_13
+      rect:
+        serializedVersion: 2
+        x: 3053
+        y: 2643
+        width: 847
+        height: 851
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe837c7dd1446bb0800000000000000
+      internalID: -4943754071414436104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_14
+      rect:
+        serializedVersion: 2
+        x: 4131
+        y: 2643
+        width: 848
+        height: 851
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24f07b8b6f8acd70800000000000000
+      internalID: 9064214892100252716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_15
+      rect:
+        serializedVersion: 2
+        x: 5252
+        y: 2631
+        width: 848
+        height: 851
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210086583c6a4a060800000000000000
+      internalID: 6963874282508648466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_16
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 1299
+        width: 729
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e970d03a40b17aa60800000000000000
+      internalID: 7685140995860400030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_17
+      rect:
+        serializedVersion: 2
+        x: 3144
+        y: 1299
+        width: 729
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee73280738597fc0800000000000000
+      internalID: -3496666642293489937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_18
+      rect:
+        serializedVersion: 2
+        x: 4246
+        y: 1299
+        width: 729
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae55c3d06a5a1480800000000000000
+      internalID: -8927723939392299360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_19
+      rect:
+        serializedVersion: 2
+        x: 5338
+        y: 1299
+        width: 730
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23dc941628d68600800000000000000
+      internalID: 470300869172974381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_20
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 84
+        width: 816
+        height: 816
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e55aa7e8d28a710800000000000000
+      internalID: 1704662548925996675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_21
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 84
+        width: 813
+        height: 816
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a07e1ebed36a330800000000000000
+      internalID: 3721730225384917572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_22
+      rect:
+        serializedVersion: 2
+        x: 4201
+        y: 84
+        width: 820
+        height: 816
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89efe65b58da1b210800000000000000
+      internalID: 1347048553346694808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans-titre---1_23
+      rect:
+        serializedVersion: 2
+        x: 5268
+        y: 84
+        width: 816
+        height: 816
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aaae04163e0ab520800000000000000
+      internalID: 2718500950499044005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
