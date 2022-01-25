@@ -61,23 +61,23 @@ public class PopUp_Script : MonoBehaviour
         Hit(Spawn_PopUp.Instance.damageOnClick);
         gameObject.transform.DOMoveZ(-2, 0.1f);
         Debug.Log("first click");
-        OnClickNimporte();
+        //OnClickNimporte();
     }
 
-    public void OnClickNimporte()
+    /*public void OnClickNimporte()
     {
         Debug.Log("à cliquer n'importe");
         //gameObject.transform.transform.DOComplete();
         //gameObject.transform.DOMoveZ(MoveInZ, .001f);
         //MoveInZ = 0;
         //gameObject.transform.DOMoveZ(MoveInZ, 1f);
-        /*if (PopUpPrefab != null)
+        if (PopUpPrefab != null)
         {
             Debug.Log(gameObject);
             PopUpPrefab.transform.DOMoveZ(0, .001f);
             gameObject.transform.DOMoveZ(-1, .001f);
-        }*/
-    }
+        }
+    }*/
 
 
     public void Updatelife()
