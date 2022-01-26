@@ -24,7 +24,7 @@ public class MainGame : MonoBehaviour
     public int myMoney = 0;
     //private int money = 1;
     //private int moneyBoss = 0;
-    public int totalDPS;
+    public int totalDPS = 0;
 
     public static MainGame Instance;
 

@@ -65,23 +65,28 @@ public class Spawn_PopUp : MonoBehaviour
             _timerAutoDamage = 0;
             //foreach (var upgrade in MainGame.Instance._unlockedUpgrades)
             //{
-            if (_listSpecialPopUp[0] != null)
+            if (MainGame.Instance._unlockedUpgrades.Count != 0)
             {
-                _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(MainGame.Instance.totalDPS); 
-            }
-            else if (_listPopUp[0] != null)
-            {
-                Debug.Log("click auto");
-                //foreach (var i in MainGame.Instance._unlockedUpgrades)
-                //{
-                _listPopUp[0].GetComponent<PopUp_Script>().Hit(MainGame.Instance.totalDPS);
-                Debug.Log("UpgradeUI.Instance.initUpgrade" + UpgradeUI.Instance.initUpgrade);
-                //}
-                _listPopUp[0].transform.DOMoveZ(-1, 0.1f);
-                //Debug.Log(UpgradeUI.Instance.addDPS);
-            }
 
-            //}
+
+                if (_listSpecialPopUp[0] != null)
+                {
+                    _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(MainGame.Instance.totalDPS);
+                }
+                else if (_listPopUp[0] != null)
+                {
+                    Debug.Log("click auto");
+                    //foreach (var i in MainGame.Instance._unlockedUpgrades)
+                    //{
+                    _listPopUp[0].GetComponent<PopUp_Script>().Hit(MainGame.Instance.totalDPS);
+                    Debug.Log("UpgradeUI.Instance.initUpgrade" + UpgradeUI.Instance.initUpgrade);
+                    //}
+                    _listPopUp[0].transform.DOMoveZ(-1, 0.1f);
+                    //Debug.Log(UpgradeUI.Instance.addDPS);
+                    //}
+
+                }
+            }
         }
     }
 
