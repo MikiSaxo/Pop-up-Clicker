@@ -96,9 +96,9 @@ public class Spawn_PopUp : MonoBehaviour
         howManyDied++;
         if (howManyDied % (10 + addWeightWave) == 0)
         {
-            whichWave++;
             _lifeOfPopUp += 10;
-            UpdateWave();
+            _lifeOfPopUp += _lifeOfPopUp;
+            
             StartCoroutine(SpawnNewPopUp());
         }
         else if (howManyDied % (15 + addWeightWave) == 0)
@@ -109,6 +109,8 @@ public class Spawn_PopUp : MonoBehaviour
             StartCoroutine(SpawnNewPopUp());
             //_lifeOfPopUp -= 100;
             addWeightWave += 5;
+            whichWave++;
+            UpdateWave();
         }
         else
             StartCoroutine(SpawnNewPopUp());
