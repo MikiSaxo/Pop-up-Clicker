@@ -96,7 +96,7 @@ public class Spawn_PopUp : MonoBehaviour
             //_lifeOfPopUp += 10;
             _lifeOfPopUp += _lifeOfPopUp;
             Debug.Log("vie popup" + _lifeOfPopUp);
-            addMoney++;
+            addMoney+=2;
 
             StartCoroutine(SpawnNewPopUp());
         }

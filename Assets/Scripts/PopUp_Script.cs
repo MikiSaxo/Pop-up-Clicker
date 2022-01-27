@@ -61,6 +61,7 @@ public class PopUp_Script : MonoBehaviour
         //Spawn_PopUp.Instance.HasClickCroix();
         Hit(Spawn_PopUp.Instance.damageOnClick);
         gameObject.transform.DOMoveZ(-2, 0.1f);
+        Instantiate(Feedback, gameObject.transform);
         //Debug.Log("first click");
         //OnClickNimporte();
     }
@@ -93,7 +94,7 @@ public class PopUp_Script : MonoBehaviour
         Croix.transform.DOComplete();
         Croix.transform.DOPunchScale(new Vector3(-0.01f, -0.01f, 0), 0.3f);
         _life -= damage;
-        Instantiate(Feedback, gameObject.transform);
+       
         //MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney;
 
         if (_life <= 0)

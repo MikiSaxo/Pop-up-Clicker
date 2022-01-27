@@ -13,6 +13,7 @@ public class Pop_Up_Money : MonoBehaviour
     public Image ImageLife;
     public Image ImagePopUp;
     public GameObject Croix;
+    public GameObject Feedback;
     public Rigidbody2D rb;
     public int MoveInZ = -1;
     //public GameObject PopUpPrefab;
@@ -46,6 +47,7 @@ public class Pop_Up_Money : MonoBehaviour
         //Debug.Log("first click");
         Hit(Spawn_PopUp.Instance.damageOnClick);
         gameObject.transform.DOMoveZ(-3, 0.1f);
+        Instantiate(Feedback, gameObject.transform);
         //OnClickNimporte();
     }
     public void Updatelife()

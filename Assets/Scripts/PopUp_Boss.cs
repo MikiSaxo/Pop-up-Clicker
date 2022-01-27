@@ -17,6 +17,7 @@ public class PopUp_Boss : MonoBehaviour
     public int MoveInZ = -1;
     //public GameObject PopUpPrefab;
     //public bool isBoss;
+    public GameObject Feedback;
 
 
 
@@ -45,6 +46,7 @@ public class PopUp_Boss : MonoBehaviour
         //Spawn_PopUp.Instance.HasClickCroix();
         Hit(Spawn_PopUp.Instance.damageOnClick);
         gameObject.transform.DOMoveZ(-3, 0.1f);
+        Instantiate(Feedback, gameObject.transform);
         //Debug.Log("first click");
         //OnClickNimporte();
     }
