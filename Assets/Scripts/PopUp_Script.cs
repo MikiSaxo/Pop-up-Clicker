@@ -16,8 +16,8 @@ public class PopUp_Script : MonoBehaviour
     public Rigidbody2D rb;
     public int MoveInZ = -1;
     public GameObject PopUpPrefab;
-    public bool isBoss;
-    
+    //public bool isBoss;
+
 
 
     public static PopUp_Script Instance;
@@ -30,17 +30,17 @@ public class PopUp_Script : MonoBehaviour
     public void Start()
     {
         Debug.Log("yo le spawn de popup");
-        if (!isBoss)
-        {
-            var i = Random.Range(1, Spawn_PopUp.Instance.popUpSprites.Count);
-            Debug.Log("random number for sprite pop up : " + i);
-            m_Sprite = Spawn_PopUp.Instance.popUpSprites[i];
-            ImagePopUp.sprite = m_Sprite;
-            //Debug.Log("Sprite popup" + m_Sprite);
-            _lifeMax = Spawn_PopUp.Instance._lifeOfPopUp;
-            _life = _lifeMax;
-            Updatelife();
-        }
+        //if (!isBoss)
+        //{
+        var i = Random.Range(1, Spawn_PopUp.Instance.popUpSprites.Count);
+        //Debug.Log("random number for sprite pop up : " + i);
+        m_Sprite = Spawn_PopUp.Instance.popUpSprites[i];
+        ImagePopUp.sprite = m_Sprite;
+        //Debug.Log("Sprite popup" + m_Sprite);
+        _lifeMax = Spawn_PopUp.Instance._lifeOfPopUp;
+        _life = _lifeMax;
+        Updatelife();
+        //}
         /*else
         {
              Debug.Log("bonjour c'est le boss");
@@ -60,7 +60,7 @@ public class PopUp_Script : MonoBehaviour
         //Spawn_PopUp.Instance.HasClickCroix();
         Hit(Spawn_PopUp.Instance.damageOnClick);
         gameObject.transform.DOMoveZ(-2, 0.1f);
-        Debug.Log("first click");
+        //Debug.Log("first click");
         //OnClickNimporte();
     }
 
