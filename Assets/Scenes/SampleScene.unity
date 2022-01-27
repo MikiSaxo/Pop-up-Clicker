@@ -736,7 +736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000045784254}
+  m_AnchoredPosition: {x: 0, y: 0.000035218804}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &352276157
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1660570109}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.921021
+  m_Size: 0.92102116
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2359,7 +2359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 109830.62, y: 1930916.8}
+  m_AnchoredPosition: {x: 115909.445, y: 2041010.8}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -3151,34 +3151,35 @@ MonoBehaviour:
   - Name: Cleaner2
     Description: Adds 2 dps
     Sprite: {fileID: 21300000, guid: 54deb23e9a7a1d24482d7321396babb1, type: 3}
-    Cost: 50
+    Cost: 150
     DPS: 2
   - Name: Cleaner3
     Description: Adds 10 dps
     Sprite: {fileID: 21300000, guid: f0e8f0e4d4c4e2840a2fe0137536fb08, type: 3}
-    Cost: 100
+    Cost: 500
     DPS: 10
   - Name: Cleaner4
     Description: Adds 25 dps
     Sprite: {fileID: 21300000, guid: 9ec1555bb93e6ae418a3ea433bb4f314, type: 3}
-    Cost: 250
+    Cost: 2000
     DPS: 25
   - Name: Cleaner5
     Description: Adds 100 dps
     Sprite: {fileID: 21300000, guid: 9eca8369606237046969e9296e6a0cdd, type: 3}
-    Cost: 500
+    Cost: 5000
     DPS: 100
   - Name: Cleaner6
     Description: Adds 500 dps
     Sprite: {fileID: 21300000, guid: eab6c6a3a5015aa46b775cffa538814b, type: 3}
-    Cost: 1000
+    Cost: 30000
     DPS: 500
   _unlockedUpgrades: []
   isShopOpen: 0
   Shop: {fileID: 256726777}
   verticalScrollbar: {fileID: 883284449}
   MyMoney: {fileID: 1742789922}
-  myMoney: 68
+  myMoney: 0
+  totalDPS: 0
 --- !u!4 &1607118923
 Transform:
   m_ObjectHideFlags: 0
@@ -3831,8 +3832,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1648210077}
   m_HandleRect: {fileID: 1648210076}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.99988645
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4007,7 +4008,7 @@ MonoBehaviour:
   - {fileID: 194170036}
   - {fileID: 28231099}
   PopUp_Script: {fileID: 1926898789522691500, guid: cc09dda773b534041ba1d4bb7d91852e, type: 3}
-  _lifeOfPopUp: 10
+  _lifeOfPopUp: 5
   damageOnClick: 1
   popUpSprites:
   - {fileID: 7583527148191785731, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
@@ -4022,7 +4023,6 @@ MonoBehaviour:
   _listSpecialPopUp:
   - {fileID: 0}
   addMoney: 1
-  addDPS: 0
   whichWave: 0
   howManyDied: 0
   isBoss: 0

@@ -11,7 +11,7 @@ public class Spawn_PopUp : MonoBehaviour
     public GameObject PopUp;
     public GameObject PopUpBoss;
     public List<GameObject> SpawnPlace;
-    public PopUp_Script PopUp_Script;
+    //public PopUp_Script PopUp_Script;
     //public int money;
     //public Text moneyText;
     public int _lifeOfPopUp;
@@ -21,10 +21,12 @@ public class Spawn_PopUp : MonoBehaviour
     public List<GameObject> _listPopUp;
     public List<GameObject> _listSpecialPopUp;
     public int addMoney = 1;
+    public int addNewPop;
     //public int addDPS;
 
     public int whichWave;
     public int howManyDied;
+    public int resetDied;
     public bool isBoss;
     public int addWeightWave;
 
@@ -50,12 +52,6 @@ public class Spawn_PopUp : MonoBehaviour
 
     private void Update()
     {
-
-        //addDPS = UpgradeUI.Instance.addDPS;
-        //Debug.Log("allez addDPS " + addDPS);
-        //else if (_listPopUp[2] == null)
-        // _listPopUp.RemoveAt(2);
-
         MainGame.Instance.MyMoney.text = "" + MainGame.Instance.myMoney;// "$";
 
         _timerAutoDamage += Time.deltaTime;
@@ -94,26 +90,31 @@ public class Spawn_PopUp : MonoBehaviour
     public void LanceSpawn()
     {
         howManyDied++;
-        if (howManyDied % (10 + addWeightWave) == 0)
+        resetDied++;
+        if (resetDied % (10 + addWeightWave) == 0)
         {
-            _lifeOfPopUp += 10;
+            //_lifeOfPopUp += 10;
             _lifeOfPopUp += _lifeOfPopUp;
-            
+            addMoney++;
+
             StartCoroutine(SpawnNewPopUp());
         }
-        else if (howManyDied % (15 + addWeightWave) == 0)
+        else if (resetDied % (5 + addWeightWave) == 0)
         {
             isBoss = true;
             //_lifeOfPopUp += 100;
             //Debug.Log("allo le boss " + PopUp_Script.Instance.isBoss);
             StartCoroutine(SpawnNewPopUp());
             //_lifeOfPopUp -= 100;
-            addWeightWave += 5;
+            resetDied = 0;
+            addWeightWave += 2;
             whichWave++;
+            //addNewPop++;
             UpdateWave();
         }
         else
             StartCoroutine(SpawnNewPopUp());
+
     }
 
     public void UpdateWave()

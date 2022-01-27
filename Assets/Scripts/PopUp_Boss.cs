@@ -30,14 +30,14 @@ public class PopUp_Boss : MonoBehaviour
     public void Start()
     {
         Debug.Log("yo le spawn de popup");
-        
+
         Debug.Log("bonjour c'est le boss");
         m_Sprite = Spawn_PopUp.Instance.popUpSprites[0];
         ImagePopUp.sprite = m_Sprite;
         _lifeMax = Spawn_PopUp.Instance._lifeOfPopUp * 10;
         _life = _lifeMax;
         Updatelife();
-        
+
     }
 
     public void OnClickCroix()
@@ -61,7 +61,7 @@ public class PopUp_Boss : MonoBehaviour
         Croix.transform.DOComplete();
         Croix.transform.DOPunchScale(new Vector3(0.01f, 0.01f, 0), 0.3f);
         _life -= damage;
-        MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney;
+        //MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney;
 
         if (_life <= 0)
         {
@@ -74,7 +74,17 @@ public class PopUp_Boss : MonoBehaviour
 
     public void GoDestroy()
     {
+        gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 100;
+        if (Spawn_PopUp.Instance.addNewPop <= 5)
+        {
+            Spawn_PopUp.Instance.StartSpawnNewPopUp();
+            Debug.Log("New popup apresmort boss");
+        }
+    }
+
+    public void RealDestroy()
+    {
         Destroy(gameObject);
     }
 }
