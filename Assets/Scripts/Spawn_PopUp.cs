@@ -10,6 +10,7 @@ public class Spawn_PopUp : MonoBehaviour
     public Upgrade _upgrade;
     public GameObject PopUp;
     public GameObject PopUpBoss;
+    public GameObject PopUpMoney;
     public List<GameObject> SpawnPlace;
     //public PopUp_Script PopUp_Script;
     //public int money;
@@ -19,7 +20,8 @@ public class Spawn_PopUp : MonoBehaviour
     public List<Sprite> popUpSprites;
     private float _timerAutoDamage = 0;
     public List<GameObject> _listPopUp;
-    public List<GameObject> _listSpecialPopUp;
+    public List<GameObject> _listMiniBossPopUp;
+    public List<GameObject> _listMoneyPopUp;
     public int addMoney = 1;
     public int addNewPop;
     //public int addDPS;
@@ -28,6 +30,7 @@ public class Spawn_PopUp : MonoBehaviour
     public int howManyDied;
     public int resetDied;
     public bool isBoss;
+    public bool isMoney;
     public int addWeightWave;
 
 
@@ -47,7 +50,7 @@ public class Spawn_PopUp : MonoBehaviour
 
     public void Start()
     {
-        
+
     }
 
     private void Update()
@@ -63,24 +66,21 @@ public class Spawn_PopUp : MonoBehaviour
             //{
             if (MainGame.Instance._unlockedUpgrades.Count != 0)
             {
+                
 
-
-                if (_listSpecialPopUp[0] != null)
+                if (_listMiniBossPopUp[0] != null)
                 {
-                    _listSpecialPopUp[0].GetComponent<PopUp_Boss>().Hit(MainGame.Instance.totalDPS);
+                    _listMiniBossPopUp[0].GetComponent<PopUp_Boss>().Hit(MainGame.Instance.totalDPS);
                 }
                 else if (_listPopUp[0] != null)
                 {
                     Debug.Log("click auto");
-                    //foreach (var i in MainGame.Instance._unlockedUpgrades)
-                    //{
                     _listPopUp[0].GetComponent<PopUp_Script>().Hit(MainGame.Instance.totalDPS);
-                    Debug.Log("UpgradeUI.Instance.initUpgrade" + UpgradeUI.Instance.initUpgrade);
-                    //}
                     _listPopUp[0].transform.DOMoveZ(-1, 0.1f);
-                    //Debug.Log(UpgradeUI.Instance.addDPS);
-                    //}
-
+                }
+                if (_listMoneyPopUp[0] != null)
+                {
+                    _listMoneyPopUp[0].GetComponent<Pop_Up_Money>().Hit(MainGame.Instance.totalDPS);
                 }
             }
         }
@@ -95,11 +95,17 @@ public class Spawn_PopUp : MonoBehaviour
         {
             //_lifeOfPopUp += 10;
             _lifeOfPopUp += _lifeOfPopUp;
+            Debug.Log("vie popup" + _lifeOfPopUp);
             addMoney++;
 
             StartCoroutine(SpawnNewPopUp());
         }
-        else if (resetDied % (5 + addWeightWave) == 0)
+        else if (howManyDied % 2 == 0)
+        {
+            isMoney = true;
+            StartCoroutine(SpawnNewPopUp());
+        }
+        else if (resetDied % (15 + addWeightWave) == 0)
         {
             isBoss = true;
             //_lifeOfPopUp += 100;
@@ -109,7 +115,7 @@ public class Spawn_PopUp : MonoBehaviour
             resetDied = 0;
             addWeightWave += 2;
             whichWave++;
-            //addNewPop++;
+            addNewPop++;
             UpdateWave();
         }
         else
@@ -125,7 +131,7 @@ public class Spawn_PopUp : MonoBehaviour
     public void StartSpawnNewPopUp()
     {
         Debug.Log("Spawn New PopUp Start");
-        
+
         var i = Random.Range(0, SpawnPlace.Count);
         GameObject go = GameObject.Instantiate(PopUp, SpawnPlace[i].transform, false);
         go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
@@ -136,23 +142,53 @@ public class Spawn_PopUp : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         Debug.Log("Lance Spawn New PopUp");
 
-        if (_listPopUp[0] == null)
+        for (int j = 0; j <= 5; j++)
+        {
+            if (_listPopUp[j] == null)
+            {
+                _listPopUp.RemoveAt(j);
+                break;
+            }
+        }
+
+        /*if (_listPopUp[0] == null)
             _listPopUp.RemoveAt(0);
         else if (_listPopUp[1] == null)
             _listPopUp.RemoveAt(1);
+        else if (_listPopUp[2] == null)
+            _listPopUp.RemoveAt(2);
+        else if (_listPopUp[3] == null)
+            _listPopUp.RemoveAt(3);
+        else if (_listPopUp[4] == null)
+            _listPopUp.RemoveAt(4);
+        else if (_listPopUp[5] == null)
+            _listPopUp.RemoveAt(5);*/
 
         var i = Random.Range(0, SpawnPlace.Count);
         if (isBoss)
         {
-            if (_listSpecialPopUp[0] == null)
-                _listSpecialPopUp.RemoveAt(0);
-            else if (_listSpecialPopUp[1] == null)
-                _listSpecialPopUp.RemoveAt(1);
+            if (_listMiniBossPopUp[0] == null)
+                _listMiniBossPopUp.RemoveAt(0);
+            else if (_listMiniBossPopUp[1] == null)
+                _listMiniBossPopUp.RemoveAt(1);
 
             GameObject go = GameObject.Instantiate(PopUpBoss, SpawnPlace[i].transform, false);
             go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
-            _listSpecialPopUp.Add(go);
+            _listMiniBossPopUp.Add(go);
             isBoss = false;
+        }
+        if (isMoney)
+        {
+            GameObject go = GameObject.Instantiate(PopUpMoney, SpawnPlace[i].transform, false);
+            go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
+            _listMoneyPopUp.Add(go);
+            isMoney = false;
+
+            if (_listMoneyPopUp[0] == null)
+                _listMoneyPopUp.RemoveAt(0);
+            //if (_listmoneypopup[1] == null)
+            //    _listmoneypopup.removeat(1);
+
         }
         //else
         //{
