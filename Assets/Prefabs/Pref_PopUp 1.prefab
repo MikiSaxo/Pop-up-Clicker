@@ -135,6 +135,7 @@ MonoBehaviour:
   rb: {fileID: 1034889070205884729}
   MoveInZ: -1
   PopUpPrefab: {fileID: 4579469007444671051}
+  Feedback: {fileID: 1840878571493992068, guid: 3d71f643a7a53d3469d34336025803e5, type: 3}
 --- !u!61 &7006953305183404229
 BoxCollider2D:
   m_ObjectHideFlags: 0

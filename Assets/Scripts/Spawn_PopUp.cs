@@ -100,7 +100,7 @@ public class Spawn_PopUp : MonoBehaviour
 
             StartCoroutine(SpawnNewPopUp());
         }
-        else if (howManyDied % 2 == 0)
+        else if (howManyDied % 20 == 0)
         {
             isMoney = true;
             StartCoroutine(SpawnNewPopUp());

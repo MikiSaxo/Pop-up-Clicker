@@ -16,6 +16,7 @@ public class PopUp_Script : MonoBehaviour
     public Rigidbody2D rb;
     public int MoveInZ = -1;
     public GameObject PopUpPrefab;
+    public GameObject Feedback;
     //public bool isBoss;
 
 
@@ -92,6 +93,7 @@ public class PopUp_Script : MonoBehaviour
         Croix.transform.DOComplete();
         Croix.transform.DOPunchScale(new Vector3(-0.01f, -0.01f, 0), 0.3f);
         _life -= damage;
+        Instantiate(Feedback, gameObject.transform);
         //MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney;
 
         if (_life <= 0)
