@@ -13,9 +13,9 @@ public class UpgradeUI : MonoBehaviour
     public Text Text;
     public Text TextCost;
     
-    public GameObject ButtonCost;
-    //public Color ColorInitial;
-    //public Color ColorAsserDeThune;
+    public Image ButtonCost;
+    public Color ColorInitial;
+    public Color ColorAsserDeThune;
 
     private Upgrade _upgrade;
     public UpdateClic UpgradeClic;
@@ -167,11 +167,18 @@ public class UpgradeUI : MonoBehaviour
         if (ClickMax)
             OnClickxMax();
 
-        //if (_upgrade.Cost <= MainGame.Instance.myMoney)
-        //    ButtonCost.DOColor(ColorAsserDeThune, 0.5f);
-        //else
-        //    ButtonCost.DOColor(ColorInitial, 0.5f);
-       
+        if (_upgrade.Cost <= MainGame.Instance.myMoney)
+        {
+
+            //            Text.DOColor(ColorAsserDeThune, 0.5f);
+            ButtonCost.DOColor(ColorAsserDeThune, 0.5f);
+        }
+        //ButtonCost.DOColor(ColorAsserDeThune, 0.5f);
+        else
+        {
+            //          Text.DOColor(ColorInitial, 0.5f);
+            ButtonCost.DOColor(ColorInitial, 0.5f);
+        }
     }
 }
 

@@ -736,7 +736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000053054114}
+  m_AnchoredPosition: {x: 0, y: -0.000019073486}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &352276157
@@ -1950,11 +1950,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &801786338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6044643805884918772, guid: 7cd94dacf634f174dbb3b20291ec2c97, type: 3}
-  m_PrefabInstance: {fileID: 3644714623665093240}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &879251195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,7 +2354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 141269.72, y: 3689747.8}
+  m_AnchoredPosition: {x: 146015.92, y: 4350955}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -3143,6 +3138,11 @@ MonoBehaviour:
   PrefabUpgradeUI: {fileID: 443924058821047797, guid: 7cd94dacf634f174dbb3b20291ec2c97, type: 3}
   ParentUprades: {fileID: 1004252359}
   Upgrades:
+  - Name: Clicker
+    Description: Adds 1 dpc
+    Sprite: {fileID: -7127196765886375475, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    Cost: 10
+    DPS: 0
   - Name: Cleaner1
     Description: Adds 1 dps
     Sprite: {fileID: 21300000, guid: b4c5ad9c07f488e4cabdff45ae5d9b83, type: 3}
@@ -3178,7 +3178,7 @@ MonoBehaviour:
   Shop: {fileID: 256726777}
   verticalScrollbar: {fileID: 883284449}
   MyMoney: {fileID: 1742789922}
-  myMoney: 4134
+  myMoney: 3390
   totalDPS: 0
 --- !u!4 &1607118923
 Transform:
@@ -4055,7 +4055,15 @@ PrefabInstance:
     - target: {fileID: -5566374091114759200, guid: 7cd94dacf634f174dbb3b20291ec2c97, type: 3}
       propertyPath: ButtonCost
       value: 
-      objectReference: {fileID: 801786338}
+      objectReference: {fileID: 0}
+    - target: {fileID: -5566374091114759200, guid: 7cd94dacf634f174dbb3b20291ec2c97, type: 3}
+      propertyPath: ColorInitial.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5566374091114759200, guid: 7cd94dacf634f174dbb3b20291ec2c97, type: 3}
+      propertyPath: ColorAsserDeThune.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 443924058821047797, guid: 7cd94dacf634f174dbb3b20291ec2c97, type: 3}
       propertyPath: m_Name
       value: UpgradeUI
