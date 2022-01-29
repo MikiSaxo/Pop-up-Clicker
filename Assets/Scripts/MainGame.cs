@@ -19,12 +19,16 @@ public class MainGame : MonoBehaviour
     public bool isShopOpen = true;
     public GameObject Shop;
     public GameObject verticalScrollbar;
+    public List<Trophee> Trophees;
+    public GameObject PrefabTrophee;
+    public GameObject ParentTrophee;
 
     public Text MyMoney;
     public int myMoney = 0;
     //private int money = 1;
     //private int moneyBoss = 0;
     public int totalDPS = 0;
+    public int totalDPC = 0;
 
     public static MainGame Instance;
 
@@ -44,6 +48,13 @@ public class MainGame : MonoBehaviour
             go.transform.localPosition = Vector3.zero;
             go.GetComponent<UpgradeUI>().Initialize(upgrade);
             go.GetComponent<UpgradeUI>().GetValue(upgrade);
+        }
+        foreach (var trophee in Trophees)
+        {
+            GameObject go2 = GameObject.Instantiate(PrefabTrophee, ParentTrophee.transform, false);
+            go2.transform.localPosition = Vector3.zero;
+            go2.GetComponent<TropheeUI>().Initialize(trophee);
+
         }
     }
 

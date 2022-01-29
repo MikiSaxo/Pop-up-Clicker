@@ -45,7 +45,7 @@ public class Pop_Up_Money : MonoBehaviour
     {
         //Spawn_PopUp.Instance.HasClickCroix();
         //Debug.Log("first click");
-        Hit(Spawn_PopUp.Instance.damageOnClick);
+        Hit(MainGame.Instance.totalDPC);
         gameObject.transform.DOMoveZ(-3, 0.1f);
         Instantiate(Feedback, gameObject.transform);
         //OnClickNimporte();

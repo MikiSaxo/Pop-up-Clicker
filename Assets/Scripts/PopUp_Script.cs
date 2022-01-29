@@ -59,7 +59,7 @@ public class PopUp_Script : MonoBehaviour
     public void OnClickCroix()
     {
         //Spawn_PopUp.Instance.HasClickCroix();
-        Hit(Spawn_PopUp.Instance.damageOnClick);
+        Hit(MainGame.Instance.totalDPC);
         gameObject.transform.DOMoveZ(-2, 0.1f);
         Instantiate(Feedback, gameObject.transform);
         //Debug.Log("first click");

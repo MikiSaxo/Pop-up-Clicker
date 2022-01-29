@@ -18,14 +18,13 @@ public class UpgradeUI : MonoBehaviour
     public Color ColorAsserDeThune;
 
     private Upgrade _upgrade;
-    public UpdateClic UpgradeClic;
     public int n;
     public int m =0;
     private int oldCost;
     private int initCost;
     private bool ClickMax = false;
     public int initUpgrade;
-    //public int totalDPS;
+    public int initUpgradeDPC;
 
     public static UpgradeUI Instance;
 
@@ -37,6 +36,7 @@ public class UpgradeUI : MonoBehaviour
     public void Start()
     {
         initUpgrade = _upgrade.DPS;
+        initUpgradeDPC = _upgrade.DPC;
     }
 
     public void GetValue(Upgrade upgrade)
@@ -62,6 +62,8 @@ public class UpgradeUI : MonoBehaviour
                 m += 10;
                 MainGame.Instance.totalDPS += _upgrade.DPS;
                 _upgrade.DPS += initUpgrade * 10;
+                MainGame.Instance.totalDPC += _upgrade.DPC;
+                _upgrade.DPC += initUpgradeDPC * 10;
 
 
                 //OnClickx10();
@@ -70,24 +72,29 @@ public class UpgradeUI : MonoBehaviour
             {
                 ClickMax = false;
                 m++;
-                Debug.Log("DPS" + _upgrade.DPS);
+                Debug.Log("DPC" + _upgrade.DPC);
                 MainGame.Instance.totalDPS += _upgrade.DPS;
                 _upgrade.DPS += initUpgrade;
+                MainGame.Instance.totalDPC += _upgrade.DPC;
+                _upgrade.DPC += initUpgradeDPC;
                 _upgrade.Cost += initCost;
             }
             else
             {
                 MainGame.Instance.totalDPS += _upgrade.DPS;
+                MainGame.Instance.totalDPC += _upgrade.DPC;
                 m += n - 1;
                 _upgrade.DPS += initUpgrade * n - 1;
+                _upgrade.DPC += initUpgradeDPC * n - 1;
                 OnClickxMax();
             }
 
             //addDPS = _upgrade.DPS;
             //Debug.Log("je veux addDPS svp " + addDPS);
-
-            _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
-
+            if (_upgrade.DPC == 0)
+                _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
+            else
+                _upgrade.Description = "Adds " + _upgrade.DPC + " dpc";
             Initialize(_upgrade);
             //ButtonCost.SetActive(false); //ça fonctionne ça
         }
@@ -169,14 +176,10 @@ public class UpgradeUI : MonoBehaviour
 
         if (_upgrade.Cost <= MainGame.Instance.myMoney)
         {
-
-            //            Text.DOColor(ColorAsserDeThune, 0.5f);
             ButtonCost.DOColor(ColorAsserDeThune, 0.5f);
         }
-        //ButtonCost.DOColor(ColorAsserDeThune, 0.5f);
         else
         {
-            //          Text.DOColor(ColorInitial, 0.5f);
             ButtonCost.DOColor(ColorInitial, 0.5f);
         }
     }
@@ -190,4 +193,5 @@ public class Upgrade
     public Sprite Sprite;
     public int Cost;
     public int DPS;
+    public int DPC;
 }

@@ -61,12 +61,40 @@ public class Spawn_PopUp : MonoBehaviour
 
         if (_timerAutoDamage >= 1.0f)
         {
+            int test = 0;
             _timerAutoDamage = 0;
-            //foreach (var upgrade in MainGame.Instance._unlockedUpgrades)
-            //{
-            if (MainGame.Instance._unlockedUpgrades.Count != 0)
+            for (int i = 0; i < MainGame.Instance._unlockedUpgrades.Count; i++)
             {
+                if (MainGame.Instance._unlockedUpgrades[i].Name != MainGame.Instance.Upgrades[0].Name)
+                    test = i;
                 
+                
+            }
+
+                if (MainGame.Instance._unlockedUpgrades[test] != MainGame.Instance.Upgrades[0])
+                {
+
+                    if (_listMiniBossPopUp[0] != null)
+                    {
+                        _listMiniBossPopUp[0].GetComponent<PopUp_Boss>().Hit(MainGame.Instance.totalDPS);
+                    }
+                    else if (_listPopUp[0] != null)
+                    {
+                        Debug.Log("click auto");
+                        _listPopUp[0].GetComponent<PopUp_Script>().Hit(MainGame.Instance.totalDPS);
+                        _listPopUp[0].transform.DOMoveZ(-1, 0.1f);
+                    }
+                    if (_listMoneyPopUp[0] != null)
+                    {
+                        _listMoneyPopUp[0].GetComponent<Pop_Up_Money>().Hit(MainGame.Instance.totalDPS);
+                    }
+
+                }
+            
+            /*if (MainGame.Instance._unlockedUpgrades.Count > 1) /*a revoir car c'est eclater le != 0 est bien mais j'sais pas comment faire en sorte
+                que quand on click sur le premier l'auto ce lance pas la faut juste forcer le joueur a acheter le dpc en premier/
+            {
+              
 
                 if (_listMiniBossPopUp[0] != null)
                 {
@@ -82,7 +110,7 @@ public class Spawn_PopUp : MonoBehaviour
                 {
                     _listMoneyPopUp[0].GetComponent<Pop_Up_Money>().Hit(MainGame.Instance.totalDPS);
                 }
-            }
+            }*/
         }
     }
 
@@ -125,7 +153,7 @@ public class Spawn_PopUp : MonoBehaviour
 
     public void UpdateWave()
     {
-        damageOnClick++;
+        MainGame.Instance.totalDPC++;
     }
 
     public void StartSpawnNewPopUp()
