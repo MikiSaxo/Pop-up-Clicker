@@ -14,7 +14,7 @@ public class MainGame : MonoBehaviour
     private int _currentMonster;
     public List<Upgrade> Upgrades;
     public List<Upgrade> _unlockedUpgrades = new List<Upgrade>();
-    private float _timerAutoDamage = 0;
+    //private float _timerAutoDamage = 0;
 
     public bool isShopOpen = true;
     public GameObject Shop;

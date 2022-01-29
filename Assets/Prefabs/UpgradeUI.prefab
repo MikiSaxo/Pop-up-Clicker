@@ -61,10 +61,10 @@ MonoBehaviour:
   ButtonCost: {fileID: 3525753283749874090}
   ColorInitial: {r: 1, g: 1, b: 1, a: 1}
   ColorAsserDeThune: {r: 0.8773585, g: 0.8186513, b: 0.11173906, a: 1}
-  UpgradeClic: {fileID: 1548418434881923619, guid: 4f9db6c1f873228419db52adcd931241, type: 3}
   n: 0
   m: 1
   initUpgrade: 0
+  initUpgradeDPC: 0
 --- !u!1 &539085089367353770
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,8 +964,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.34, y: -25.03}
-  m_SizeDelta: {x: 225.19, y: 117.19}
+  m_AnchoredPosition: {x: 3.3073, y: -25.03}
+  m_SizeDelta: {x: 237.7191, y: 117.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &908490116201620590
 CanvasRenderer:
@@ -997,10 +997,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0

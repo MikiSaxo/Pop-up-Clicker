@@ -61,17 +61,19 @@ public class Spawn_PopUp : MonoBehaviour
 
         if (_timerAutoDamage >= 1.0f)
         {
-            int test = 0;
+            int position = 0;
             _timerAutoDamage = 0;
-            for (int i = 0; i < MainGame.Instance._unlockedUpgrades.Count; i++)
+            if (MainGame.Instance._unlockedUpgrades.Count > 0)
             {
-                if (MainGame.Instance._unlockedUpgrades[i].Name != MainGame.Instance.Upgrades[0].Name)
-                    test = i;
-                
-                
-            }
 
-                if (MainGame.Instance._unlockedUpgrades[test] != MainGame.Instance.Upgrades[0])
+                for (int i = 0; i < MainGame.Instance._unlockedUpgrades.Count; i++)
+                {
+                    if (MainGame.Instance._unlockedUpgrades[i] != MainGame.Instance.Upgrades[0])
+                        position = i;
+                }
+
+
+                if (MainGame.Instance._unlockedUpgrades[position] != MainGame.Instance.Upgrades[0])
                 {
 
                     if (_listMiniBossPopUp[0] != null)
@@ -90,6 +92,7 @@ public class Spawn_PopUp : MonoBehaviour
                     }
 
                 }
+            }
             
             /*if (MainGame.Instance._unlockedUpgrades.Count > 1) /*a revoir car c'est eclater le != 0 est bien mais j'sais pas comment faire en sorte
                 que quand on click sur le premier l'auto ce lance pas la faut juste forcer le joueur a acheter le dpc en premier/

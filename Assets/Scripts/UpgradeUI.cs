@@ -48,8 +48,9 @@ public class UpgradeUI : MonoBehaviour
     {
         _upgrade = upgrade;
         Image.sprite = upgrade.Sprite;
-        Text.text = upgrade.Name + System.Environment.NewLine + upgrade.Description;
+        Text.text = upgrade.Name+" (Lvl :" + m + ")" + System.Environment.NewLine + upgrade.Description;
         TextCost.text = upgrade.Cost + "$";
+
     }
     public void Onclick()
     {
@@ -72,7 +73,7 @@ public class UpgradeUI : MonoBehaviour
             {
                 ClickMax = false;
                 m++;
-                Debug.Log("DPC" + _upgrade.DPC);
+                //Debug.Log("DPC" + _upgrade.DPC);
                 MainGame.Instance.totalDPS += _upgrade.DPS;
                 _upgrade.DPS += initUpgrade;
                 MainGame.Instance.totalDPC += _upgrade.DPC;
@@ -88,13 +89,14 @@ public class UpgradeUI : MonoBehaviour
                 _upgrade.DPC += initUpgradeDPC * n - 1;
                 OnClickxMax();
             }
+            
 
-            //addDPS = _upgrade.DPS;
-            //Debug.Log("je veux addDPS svp " + addDPS);
-            if (_upgrade.DPC == 0)
-                _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
-            else
+
+            if (_upgrade.DPC > 0)
                 _upgrade.Description = "Adds " + _upgrade.DPC + " dpc";
+            else 
+                _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
+            
             Initialize(_upgrade);
             //ButtonCost.SetActive(false); //ça fonctionne ça
         }
