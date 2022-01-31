@@ -241,8 +241,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 41c3da403122a98499a55538d8bcd8ca, type: 3}
-    m_FontSize: 26
+    m_Font: {fileID: 12800000, guid: 9f47b884f4c60b440b519ccc522e2eca, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -464,6 +464,7 @@ MonoBehaviour:
   Croix: {fileID: 1585218696339654624}
   rb: {fileID: 1585218695904448731}
   MoveInZ: -1
+  Feedback: {fileID: 0}
 --- !u!1 &1585218696185462559
 GameObject:
   m_ObjectHideFlags: 0

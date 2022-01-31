@@ -30,7 +30,6 @@ public class Pop_Up_Money : MonoBehaviour
 
     public void Start()
     {
-        //Debug.Log("yo le spawn de popup");
 
         Debug.Log("bonjour c'est le popup moneyyyy");
         m_Sprite = Spawn_PopUp.Instance.popUpSprites[1];

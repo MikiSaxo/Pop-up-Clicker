@@ -24,6 +24,8 @@ public class UpgradeUI : MonoBehaviour
     private int initCost;
     private bool ClickMax = false;
     public int initUpgrade;
+    private int oldUpgrade;
+    private int oldUpgradeDPC;
     public int initUpgradeDPC;
 
     public static UpgradeUI Instance;
@@ -48,7 +50,7 @@ public class UpgradeUI : MonoBehaviour
     {
         _upgrade = upgrade;
         Image.sprite = upgrade.Sprite;
-        Text.text = upgrade.Name+" (Lvl :" + m + ")" + System.Environment.NewLine + upgrade.Description;
+        Text.text = upgrade.Name + System.Environment.NewLine + "( Lvl : " + m + " )" + System.Environment.NewLine + upgrade.Description;
         TextCost.text = upgrade.Cost + "$";
 
     }
@@ -62,22 +64,17 @@ public class UpgradeUI : MonoBehaviour
             {
                 m += 10;
                 MainGame.Instance.totalDPS += _upgrade.DPS;
-                _upgrade.DPS += initUpgrade * 10;
+                
                 MainGame.Instance.totalDPC += _upgrade.DPC;
-                _upgrade.DPC += initUpgradeDPC * 10;
 
-
-                //OnClickx10();
+                OnClickx10();
             }
             else if (n == 0)
             {
                 ClickMax = false;
                 m++;
-                //Debug.Log("DPC" + _upgrade.DPC);
                 MainGame.Instance.totalDPS += _upgrade.DPS;
-                _upgrade.DPS += initUpgrade;
                 MainGame.Instance.totalDPC += _upgrade.DPC;
-                _upgrade.DPC += initUpgradeDPC;
                 _upgrade.Cost += initCost;
             }
             else
@@ -85,8 +82,6 @@ public class UpgradeUI : MonoBehaviour
                 MainGame.Instance.totalDPS += _upgrade.DPS;
                 MainGame.Instance.totalDPC += _upgrade.DPC;
                 m += n - 1;
-                _upgrade.DPS += initUpgrade * n - 1;
-                _upgrade.DPC += initUpgradeDPC * n - 1;
                 OnClickxMax();
             }
             
@@ -111,9 +106,16 @@ public class UpgradeUI : MonoBehaviour
     {
         ClickMax = false;
         _upgrade.Cost = initCost * m;
+        _upgrade.DPS = initUpgrade * m;
+        _upgrade.DPC= initUpgradeDPC *m;
         n = 0;
         oldCost = _upgrade.Cost;
-
+        oldUpgrade = _upgrade.DPS;
+        oldUpgradeDPC = _upgrade.DPC;
+        if (_upgrade.DPC > 0)
+            _upgrade.Description = "Adds " + _upgrade.DPC + " dpc";
+        else
+            _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
         Initialize(_upgrade);
     }
 
@@ -132,9 +134,20 @@ public class UpgradeUI : MonoBehaviour
             {
                 _upgrade.Cost += initCost * m;
                 oldCost += _upgrade.Cost;
+                _upgrade.DPS += initUpgrade * m;
+                oldUpgrade += _upgrade.DPS;
+                _upgrade.DPC += initUpgradeDPC * m;
+                oldUpgradeDPC += _upgrade.DPC;
                 //Debug.Log(oldCost);
             }
+            
+            _upgrade.DPS = oldUpgrade;
+            _upgrade.DPC = oldUpgradeDPC;
             _upgrade.Cost = oldCost;
+            if (_upgrade.DPC > 0)
+                _upgrade.Description = "Adds " + _upgrade.DPC + " dpc";
+            else
+                _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
         }
         Initialize(_upgrade);
     }
@@ -150,21 +163,39 @@ public class UpgradeUI : MonoBehaviour
             
              _upgrade.Cost += initCost;
              oldCost += _upgrade.Cost;
-             n++;
+
+            _upgrade.DPS += initUpgrade;
+            oldUpgrade += _upgrade.DPS;
+            _upgrade.DPC += initUpgradeDPC;
+            oldUpgradeDPC += _upgrade.DPC;
+            n++;
         }
         
         if(n > 1)
         {
-            if (m==1)
+            if (m == 1)
+            {
                 oldCost -= initCost * (n);
+                oldUpgrade -= initUpgrade * (n);
+                oldUpgradeDPC -= initUpgradeDPC * (n);
+            }
             else
             {
                 oldCost -= _upgrade.Cost;
+                oldUpgrade -= _upgrade.DPS;
+                oldUpgradeDPC -= _upgrade.DPC;
             }
              _upgrade.Cost = oldCost;
+            _upgrade.DPS = oldUpgrade;
+            _upgrade.DPC = oldUpgradeDPC;
         }      
         else
             OnClickx1();
+
+        if (_upgrade.DPC > 0)
+            _upgrade.Description = "Adds " + _upgrade.DPC + " dpc";
+        else
+            _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
 
         Initialize(_upgrade);
         ClickMax = true;
