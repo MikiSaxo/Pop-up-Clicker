@@ -3234,7 +3234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 174706.45, y: 11880722}
+  m_AnchoredPosition: {x: 175026.42, y: 11913488}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -4742,6 +4742,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuNotifs: {fileID: 643815541}
   isNotifOpen: 0
+  numberNotif: 0
+  TextNotif: {fileID: 273147521}
   Button1: {fileID: 455363535}
   Button2: {fileID: 447321816}
   Button3: {fileID: 1356928428}

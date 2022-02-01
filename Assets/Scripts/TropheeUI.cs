@@ -40,7 +40,7 @@ public class TropheeUI : MonoBehaviour
         }
         else if (MainGame.Instance.compteurClick >= _trophee.clicForUnlock)
         {
-            ImageTrophee.DOColor(ColorInitial, 0.5f);
+            ImageTrophee.DOColor(ColorInitial, 0.5f); 
         }
         else if (Spawn_PopUp.Instance.howManySpeDied >= _trophee.speKillForUnlock)
         {
