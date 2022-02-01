@@ -14,6 +14,7 @@ public class TaskBarCommands : MonoBehaviour
     public GameObject Button4;
     public GameObject Button5;
     public GameObject Button6;
+    public GameObject Button7;
 
 
     public static TaskBarCommands Instance;
@@ -31,6 +32,7 @@ public class TaskBarCommands : MonoBehaviour
         Button4.SetActive(false);
         Button5.SetActive(false);
         Button6.SetActive(false);
+        Button7.SetActive(false);
     }
     public void OnClickOpenNotifs()
     {
@@ -85,6 +87,10 @@ public class TaskBarCommands : MonoBehaviour
             else if (MainGame.Instance._unlockedUpgrades[position] == MainGame.Instance.Upgrades[6])
             {
                 Button6.SetActive(true);
+            }
+            else if (MainGame.Instance._unlockedUpgrades[position] == MainGame.Instance.Upgrades[7])
+            {
+                Button7.SetActive(true);
             }
         }
     }
