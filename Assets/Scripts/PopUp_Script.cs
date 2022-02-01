@@ -60,6 +60,7 @@ public class PopUp_Script : MonoBehaviour
     {
         //Spawn_PopUp.Instance.HasClickCroix();
         Hit(MainGame.Instance.totalDPC);
+        MainGame.Instance.compteurClick++;
         gameObject.transform.DOMoveZ(-2, 0.1f);
         Instantiate(Feedback, gameObject.transform);
         //Debug.Log("first click");
@@ -110,6 +111,7 @@ public class PopUp_Script : MonoBehaviour
     {
         gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 10;
+        MainGame.Instance.totalMoney += Spawn_PopUp.Instance.addMoney * 10;
         Spawn_PopUp.Instance.LanceSpawn();
     }
 

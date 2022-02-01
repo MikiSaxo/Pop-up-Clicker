@@ -23,6 +23,9 @@ public class MainGame : MonoBehaviour
 
     public Text MyMoney;
     public int myMoney = 0;
+    public int totalMoney = 0;
+    public int compteurClick = 0;
+    public int compteurUpgrade=0;
     //private int money = 1;
     //private int moneyBoss = 0;
     public int totalDPS = 0;
@@ -125,7 +128,12 @@ public class MainGame : MonoBehaviour
     void Update()
     {
         //Debug.Log("totaldps" + totalDPS);
-
+        if (totalMoney > 2000000000)
+            totalMoney = 2000000000;
+        if (compteurClick > 2000000000)
+            compteurClick = 2000000000;
+        if (compteurUpgrade > 2000000000)
+            compteurUpgrade = 2000000000;
         /*if (Input.GetMouseButtonDown(0))
         {
             Vector3 world = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -151,7 +159,6 @@ public class MainGame : MonoBehaviour
                 HitDPS(upgrade.DPS, Monster);
             }
         }*/
-
         if (isShopOpen && Shop.transform.localScale.x <= 0)
         {
             Shop.transform.DOComplete();
