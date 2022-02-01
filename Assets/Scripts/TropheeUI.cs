@@ -19,23 +19,9 @@ public class TropheeUI : MonoBehaviour
         _trophee = trophee;
         ImageTrophee.sprite = trophee.Sprite;
         TextTrophee.text = trophee.Description;
-        //ImageTrophee.DOColor(ColorGris, 0.5f);
     }
     public void Update()
     {
-        //ImageTrophee.DOColor(ColorGris, 0.5f);
-        //for (int i = MainGame.Instance.Trophees.Count - 1; i >= 0; i--)
-        //{
-        //    if (MainGame.Instance.myMoney >= MainGame.Instance.Trophees[0].unlock)
-        //    {
-        //         ImageTrophee.DOColor(ColorGris, 0.5f);
-        //    }
-        //    else
-        //    {
-        //         ImageTrophee.DOColor(ColorInitial, 0.5f);
-        //    }
-        //}
-        //if (MainGame.Instance.myMoney >= MainGame.Instance.Trophees[0].unlock)
         if (MainGame.Instance.compteurUpgrade >= _trophee.unlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);

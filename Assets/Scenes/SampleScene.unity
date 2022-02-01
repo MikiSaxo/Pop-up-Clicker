@@ -739,8 +739,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.7000008}
-  m_SizeDelta: {x: -19.82, y: -23.78}
+  m_AnchoredPosition: {x: 7, y: -10}
+  m_SizeDelta: {x: -20.74, y: -24.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273147521
 MonoBehaviour:
@@ -764,10 +764,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9f47b884f4c60b440b519ccc522e2eca, type: 3}
-    m_FontSize: 25
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 2
     m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 0
 --- !u!222 &273147522
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_CellSize: {x: 77, y: 75}
   m_Spacing: {x: -10, y: -6}
   m_Constraint: 1
-  m_ConstraintCount: 2
+  m_ConstraintCount: 1
 --- !u!1 &352276157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7379ad1da9cf8c54c973204868d5e09b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07c6ab5c51187ab469ad99e9ce755d77, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3234,7 +3234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 172253.36, y: 11053241}
+  m_AnchoredPosition: {x: 174706.45, y: 11880722}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -4513,39 +4513,7 @@ MonoBehaviour:
   Shop: {fileID: 256726777}
   verticalScrollbar: {fileID: 883284449}
   Trophees:
-  - Description: "nombres d\u2019am\xE9liorations1"
-    Sprite: {fileID: -7127196765886375475, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 5
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 2147483647
-    popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: "nombres d\u2019am\xE9liorations2"
-    Sprite: {fileID: -4008160880392282330, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 25
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 2147483647
-    popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: "nombres d\u2019am\xE9liorations3"
-    Sprite: {fileID: -2943924474648784008, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 50
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 2147483647
-    popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: "nombres d\u2019am\xE9liorations4"
-    Sprite: {fileID: -8066948331850967007, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 75
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 2147483647
-    popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: argent1
+  - Description: Gagne 500$
     Sprite: {fileID: 6233392337620939477, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 500
@@ -4553,7 +4521,7 @@ MonoBehaviour:
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
-  - Description: argent2
+  - Description: Gagne             2 500$
     Sprite: {fileID: 6901609721944564910, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2500
@@ -4561,7 +4529,7 @@ MonoBehaviour:
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
-  - Description: argent3
+  - Description: Gagne             5 000$
     Sprite: {fileID: -7842658496781675561, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 5000
@@ -4569,77 +4537,13 @@ MonoBehaviour:
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
-  - Description: argent4
+  - Description: Gagne             10 000$
     Sprite: {fileID: -6290515085033449165, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 10000
     clicForUnlock: 2147483647
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: "nombres de boss tu\xE9s 1"
-    Sprite: {fileID: -8945851588959505942, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 2147483647
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 10
-    popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: "nombres de boss tu\xE9s 2"
-    Sprite: {fileID: -5416985746335278618, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 2147483647
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 25
-    popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: "nombres de boss tu\xE9s 3"
-    Sprite: {fileID: -1672661012024883843, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 2147483647
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 50
-    popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: "nombres de boss tu\xE9s 4"
-    Sprite: {fileID: -7273462854947013981, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 2147483647
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 100
-    popUpKillForUnlock: 2147483647
-    speKillForUnlock: 2147483647
-  - Description: ' pop up vaincu1'
-    Sprite: {fileID: 9054231278882637175, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 2147483647
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 2147483647
-    popUpKillForUnlock: 50
-    speKillForUnlock: 2147483647
-  - Description: ' pop up vaincu2'
-    Sprite: {fileID: -4943754071414436104, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 2147483647
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 2147483647
-    popUpKillForUnlock: 100
-    speKillForUnlock: 2147483647
-  - Description: ' pop up vaincu3'
-    Sprite: {fileID: 9064214892100252716, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 2147483647
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 2147483647
-    popUpKillForUnlock: 500
-    speKillForUnlock: 2147483647
-  - Description: ' pop up vaincu4'
-    Sprite: {fileID: 6963874282508648466, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 2147483647
-    moneyForUnlock: 2147483647
-    clicForUnlock: 2147483647
-    bossKillForUnlock: 2147483647
-    popUpKillForUnlock: 1000
     speKillForUnlock: 2147483647
   - Description: Clic 100 fois
     Sprite: {fileID: 7685140995860400030, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
@@ -4665,7 +4569,7 @@ MonoBehaviour:
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
-  - Description: Clic 1000 fois
+  - Description: Clic 1 000 fois
     Sprite: {fileID: 470300869172974381, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2147483647
@@ -4673,7 +4577,103 @@ MonoBehaviour:
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
-  - Description: "pop up sp\xE9"
+  - Description: "Fais 5 am\xE9lioration dans le magasin"
+    Sprite: {fileID: -7127196765886375475, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 5
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "Fais 25 am\xE9lioration dans le magasin"
+    Sprite: {fileID: -4008160880392282330, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 25
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "Fais 50 am\xE9lioration dans le magasin"
+    Sprite: {fileID: -2943924474648784008, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 50
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "Fais 75 am\xE9lioration dans le magasin"
+    Sprite: {fileID: -8066948331850967007, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 75
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: Bats 50 pop up
+    Sprite: {fileID: 9054231278882637175, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 50
+    speKillForUnlock: 2147483647
+  - Description: Bats 100 pop up
+    Sprite: {fileID: -4943754071414436104, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 100
+    speKillForUnlock: 2147483647
+  - Description: Bats 500 pop up
+    Sprite: {fileID: 9064214892100252716, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 500
+    speKillForUnlock: 2147483647
+  - Description: Bats 1 000 pop up
+    Sprite: {fileID: 6963874282508648466, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 1000
+    speKillForUnlock: 2147483647
+  - Description: Bats 10 pop up Boss
+    Sprite: {fileID: -8945851588959505942, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 10
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: Bats 25 pop up Boss
+    Sprite: {fileID: -5416985746335278618, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 25
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: Bats 50 pop up Boss
+    Sprite: {fileID: -1672661012024883843, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 50
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: Bats 100 pop up Boss
+    Sprite: {fileID: -7273462854947013981, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 100
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "Bats 1 pop up sp\xE9ciale"
     Sprite: {fileID: 1704662548925996675, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2147483647
@@ -4681,7 +4681,7 @@ MonoBehaviour:
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 1
-  - Description: "pop up sp\xE9"
+  - Description: "Bats 10 pop up sp\xE9ciales"
     Sprite: {fileID: 3721730225384917572, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2147483647
@@ -4689,7 +4689,7 @@ MonoBehaviour:
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 10
-  - Description: "pop up sp\xE9"
+  - Description: "Bats 30 pop up sp\xE9ciales"
     Sprite: {fileID: 1347048553346694808, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2147483647
@@ -4697,7 +4697,7 @@ MonoBehaviour:
     bossKillForUnlock: 2147483647
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 30
-  - Description: "pop up sp\xE9"
+  - Description: "Bats 50 pop up sp\xE9ciales"
     Sprite: {fileID: 2718500950499044005, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2147483647
@@ -4708,7 +4708,7 @@ MonoBehaviour:
   PrefabTrophee: {fileID: 223355075042484862, guid: e585ecbef907d184fbe8590d705d461a, type: 3}
   ParentTrophee: {fileID: 342762196}
   MyMoney: {fileID: 1742789922}
-  myMoney: 0
+  myMoney: 2147483647
   totalMoney: 0
   compteurClick: 0
   compteurUpgrade: 0
@@ -4748,7 +4748,7 @@ MonoBehaviour:
   Button4: {fileID: 2126587867}
   Button5: {fileID: 1455108571}
   Button6: {fileID: 758380396}
-  Button7: {fileID: 0}
+  Button7: {fileID: 1351540109}
 --- !u!1 &1627919189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,8 +5103,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218.84996, y: -32.584976}
-  m_SizeDelta: {x: 321.39, y: 59.7}
+  m_AnchoredPosition: {x: 204.92, y: -32.584976}
+  m_SizeDelta: {x: 293.54, y: 59.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742789922
 MonoBehaviour:
@@ -5128,10 +5128,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9f47b884f4c60b440b519ccc522e2eca, type: 3}
-    m_FontSize: 50
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 71
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -5356,8 +5356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.99995, y: -0.84}
-  m_SizeDelta: {x: 388.77, y: 63.49}
+  m_AnchoredPosition: {x: 144.65, y: -0.84}
+  m_SizeDelta: {x: 354.08, y: 63.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904751567
 MonoBehaviour:
