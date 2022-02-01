@@ -11,6 +11,7 @@ public class Feedback_Damage : MonoBehaviour
     private void Start()
     {
         gameObject.transform.DOMoveY(3, 1);
+        text.DOFade(0, 1.5f);
         text.text = "-" + MainGame.Instance.totalDPC;
     }
 }

@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000000076368, y: -2.3}
-  m_SizeDelta: {x: 149.54, y: 52.39}
+  m_AnchoredPosition: {x: 0.0011587, y: 0.00004673}
+  m_SizeDelta: {x: 200.57, y: 33.254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4579469007165157527
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9f47b884f4c60b440b519ccc522e2eca, type: 3}
-    m_FontSize: 30
+    m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -89,9 +89,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4579469007444671049}
   - component: {fileID: 4579469007444671048}
-  - component: {fileID: 7006953305183404229}
-  - component: {fileID: 6887710190551194046}
-  - component: {fileID: 1034889070205884729}
   m_Layer: 0
   m_Name: Pref_PopUp 1
   m_TagString: Untagged
@@ -132,86 +129,10 @@ MonoBehaviour:
   ImageLife: {fileID: 4579469007975224731}
   ImagePopUp: {fileID: 4579469007737280945}
   Croix: {fileID: 4579469008554359610}
-  rb: {fileID: 1034889070205884729}
+  rb: {fileID: 0}
   MoveInZ: -1
   PopUpPrefab: {fileID: 4579469007444671051}
   Feedback: {fileID: 1840878571493992068, guid: 3d71f643a7a53d3469d34336025803e5, type: 3}
---- !u!61 &7006953305183404229
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579469007444671051}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.03680706, y: 2.4784942}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.9987326, y: 4.8876734}
-  m_EdgeRadius: 0
---- !u!114 &6887710190551194046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579469007444671051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4579469007444671048}
-          m_TargetAssemblyTypeName: PopUp_Script, Assembly-CSharp
-          m_MethodName: OnClickNimporte
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!50 &1034889070205884729
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579469007444671051}
-  m_BodyType: 0
-  m_Simulated: 0
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &4579469007737280946
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,8 +167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.19, y: 0.77}
-  m_SizeDelta: {x: 3.0821, y: 2.9825}
+  m_AnchoredPosition: {x: -0.0216, y: 1.3726}
+  m_SizeDelta: {x: 5.4979, y: 4.7458}
   m_Pivot: {x: 0.5, y: 0.8767064}
 --- !u!222 &4579469007737280944
 CanvasRenderer:
@@ -510,6 +431,7 @@ GameObject:
   - component: {fileID: 4579469008554359608}
   - component: {fileID: 4579469008554359611}
   - component: {fileID: 4579469008554359607}
+  - component: {fileID: 8280703063400870130}
   m_Layer: 5
   m_Name: Croix
   m_TagString: Untagged
@@ -557,14 +479,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2811744340370975598, guid: f4ae5f0a2cb6e144ab5ba4b589ab4f65, type: 3}
+  m_Sprite: {fileID: -6299311848014181158, guid: f25c80284664e3542b34e69e80d1d0e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -587,7 +509,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.048807144, y: 1.243681}
+  m_Offset: {x: -4.7114906, y: -2.2521858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -598,7 +520,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 59.159054, y: 53.680653}
+  m_Size: {x: 49.63846, y: 44.718956}
   m_EdgeRadius: 0
 --- !u!114 &4579469008554359607
 MonoBehaviour:
@@ -629,6 +551,53 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8280703063400870130}
+          m_TargetAssemblyTypeName: FeedBack_Croix, Assembly-CSharp
+          m_MethodName: OnPointerEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8280703063400870130}
+          m_TargetAssemblyTypeName: FeedBack_Croix, Assembly-CSharp
+          m_MethodName: OnPointerExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &8280703063400870130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579469008554359610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eaca98cceedb7d48ab0fe28f9ceb9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4579469008554359608}
+  ColorInitial: {r: 0, g: 0, b: 0, a: 1}
+  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4579469008904865399
 GameObject:
   m_ObjectHideFlags: 0
