@@ -79,6 +79,7 @@ public class UpgradeUI : MonoBehaviour
                 MainGame.Instance.totalDPC += _upgrade.DPC;
                 _upgrade.Cost += initCost;
                 MainGame.Instance.compteurUpgrade++;
+                OnClickx1();
             }
             else
             {
@@ -91,10 +92,6 @@ public class UpgradeUI : MonoBehaviour
 
 
 
-            if (_upgrade.DPC > 0)
-                _upgrade.Description = "Adds " + _upgrade.DPC + " dpc";
-            else 
-                _upgrade.Description = "Adds " + _upgrade.DPS + " dps";
             
             Initialize(_upgrade);
             //ButtonCost.SetActive(false); //ça fonctionne ça
