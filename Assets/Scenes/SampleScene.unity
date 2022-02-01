@@ -3231,7 +3231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 168040.44, y: 9945110}
+  m_AnchoredPosition: {x: 169693.61, y: 10636736}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -4383,78 +4383,198 @@ MonoBehaviour:
   Shop: {fileID: 256726777}
   verticalScrollbar: {fileID: 883284449}
   Trophees:
-  - Description: Cadenat1
+  - Description: "nombres d\u2019am\xE9liorations1"
     Sprite: {fileID: -7127196765886375475, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
-  - Description: Cadenat2
+    unlock: 5
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "nombres d\u2019am\xE9liorations2"
     Sprite: {fileID: -4008160880392282330, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
-  - Description: Cadenat3
+    unlock: 25
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "nombres d\u2019am\xE9liorations3"
     Sprite: {fileID: -2943924474648784008, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
-  - Description: Cadenat4
+    unlock: 50
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "nombres d\u2019am\xE9liorations4"
     Sprite: {fileID: -8066948331850967007, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 75
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: argent1
     Sprite: {fileID: 6233392337620939477, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 500
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: argent2
     Sprite: {fileID: 6901609721944564910, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2500
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: argent3
     Sprite: {fileID: -7842658496781675561, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 5000
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: argent4
     Sprite: {fileID: -6290515085033449165, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
-  - Description: bouclier 1
+    unlock: 2147483647
+    moneyForUnlock: 10000
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "nombres de boss tu\xE9s 1"
     Sprite: {fileID: -8945851588959505942, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
-  - Description: bouclier 2
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 10
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "nombres de boss tu\xE9s 2"
     Sprite: {fileID: -5416985746335278618, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
-  - Description: bouclier 3
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 25
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "nombres de boss tu\xE9s 3"
     Sprite: {fileID: -1672661012024883843, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
-  - Description: bouclier 4
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 50
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
+  - Description: "nombres de boss tu\xE9s 4"
     Sprite: {fileID: -7273462854947013981, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 100
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: ' pop up vaincu1'
     Sprite: {fileID: 9054231278882637175, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 50
+    speKillForUnlock: 2147483647
   - Description: ' pop up vaincu2'
     Sprite: {fileID: -4943754071414436104, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 100
+    speKillForUnlock: 2147483647
   - Description: ' pop up vaincu3'
     Sprite: {fileID: 9064214892100252716, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 500
+    speKillForUnlock: 2147483647
   - Description: ' pop up vaincu4'
     Sprite: {fileID: 6963874282508648466, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 1000
+    speKillForUnlock: 2147483647
   - Description: Clic 100 fois
     Sprite: {fileID: 7685140995860400030, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 100
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 100
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: Clic 250 fois
     Sprite: {fileID: -3496666642293489937, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 250
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 250
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: Clic 500 fois
     Sprite: {fileID: -8927723939392299360, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 500
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 500
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: Clic 1000 fois
     Sprite: {fileID: 470300869172974381, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 1000
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 1000
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 2147483647
   - Description: "pop up sp\xE9"
     Sprite: {fileID: 1704662548925996675, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 1
   - Description: "pop up sp\xE9"
     Sprite: {fileID: 3721730225384917572, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 10
   - Description: "pop up sp\xE9"
     Sprite: {fileID: 1347048553346694808, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 30
   - Description: "pop up sp\xE9"
     Sprite: {fileID: 2718500950499044005, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
-    unlock: 0
+    unlock: 2147483647
+    moneyForUnlock: 2147483647
+    clicForUnlock: 2147483647
+    bossKillForUnlock: 2147483647
+    popUpKillForUnlock: 2147483647
+    speKillForUnlock: 50
   PrefabTrophee: {fileID: 223355075042484862, guid: e585ecbef907d184fbe8590d705d461a, type: 3}
   ParentTrophee: {fileID: 342762196}
   MyMoney: {fileID: 1742789922}

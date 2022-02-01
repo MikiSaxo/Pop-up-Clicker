@@ -45,6 +45,7 @@ public class Pop_Up_Money : MonoBehaviour
         //Spawn_PopUp.Instance.HasClickCroix();
         //Debug.Log("first click");
         Hit(MainGame.Instance.totalDPC);
+        MainGame.Instance.compteurClick++;
         gameObject.transform.DOMoveZ(-3, 0.1f);
         Instantiate(Feedback, gameObject.transform);
         //OnClickNimporte();
@@ -63,12 +64,14 @@ public class Pop_Up_Money : MonoBehaviour
         Croix.transform.DOPunchScale(new Vector3(0.01f, 0.01f, 0), 0.3f);
         _life -= damage;
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 5;
+        MainGame.Instance.totalMoney += Spawn_PopUp.Instance.addMoney * 5;
 
         if (_life <= 0)
         {
             _life = 0;
+            Spawn_PopUp.Instance.howManySpeDied++;
             GoDestroy();
-        }
+}
 
         Updatelife();
     }
@@ -77,6 +80,7 @@ public class Pop_Up_Money : MonoBehaviour
     {
         gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 100;
+        MainGame.Instance.totalMoney += Spawn_PopUp.Instance.addMoney * 100;
     }
 
     public void RealDestroy()

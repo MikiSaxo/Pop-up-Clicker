@@ -29,6 +29,8 @@ public class Spawn_PopUp : MonoBehaviour
     public int whichWave;
     public int howManyDied;
     public int resetDied;
+    public int howManyBossDied = 0;
+    public int howManySpeDied = 0;
     public bool isBoss;
     public bool isMoney;
     public int addWeightWave;
@@ -93,7 +95,7 @@ public class Spawn_PopUp : MonoBehaviour
 
                 }
             }
-            
+
             /*if (MainGame.Instance._unlockedUpgrades.Count > 1) /*a revoir car c'est eclater le != 0 est bien mais j'sais pas comment faire en sorte
                 que quand on click sur le premier l'auto ce lance pas la faut juste forcer le joueur a acheter le dpc en premier/
             {
@@ -115,6 +117,12 @@ public class Spawn_PopUp : MonoBehaviour
                 }
             }*/
         }
+        if (howManyDied > 2000000000)
+            howManyDied = 1000000000;
+        if (howManyBossDied > 2000000000)
+            howManyBossDied = 2000000000;
+        if (howManySpeDied > 2000000000)
+            howManySpeDied = 2000000000;
     }
 
 
@@ -127,7 +135,7 @@ public class Spawn_PopUp : MonoBehaviour
             //_lifeOfPopUp += 10;
             _lifeOfPopUp += _lifeOfPopUp;
             Debug.Log("vie popup" + _lifeOfPopUp);
-            addMoney+=2;
+            addMoney += 2;
 
             StartCoroutine(SpawnNewPopUp());
         }

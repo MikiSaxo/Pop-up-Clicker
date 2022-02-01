@@ -45,6 +45,7 @@ public class PopUp_Boss : MonoBehaviour
     {
         //Spawn_PopUp.Instance.HasClickCroix();
         Hit(MainGame.Instance.totalDPC);
+        MainGame.Instance.compteurClick++;
         gameObject.transform.DOMoveZ(-3, 0.1f);
         Instantiate(Feedback, gameObject.transform);
         //Debug.Log("first click");
@@ -68,6 +69,7 @@ public class PopUp_Boss : MonoBehaviour
         if (_life <= 0)
         {
             _life = 0;
+            Spawn_PopUp.Instance.howManyBossDied++;
             GoDestroy();
         }
 
@@ -78,6 +80,7 @@ public class PopUp_Boss : MonoBehaviour
     {
         gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 100;
+        MainGame.Instance.totalMoney += Spawn_PopUp.Instance.addMoney * 100;
         if (Spawn_PopUp.Instance.addNewPop <= 5)
         {
             Spawn_PopUp.Instance.StartSpawnNewPopUp();

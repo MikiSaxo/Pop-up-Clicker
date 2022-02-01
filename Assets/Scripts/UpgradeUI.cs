@@ -28,6 +28,8 @@ public class UpgradeUI : MonoBehaviour
     private int oldUpgradeDPC;
     public int initUpgradeDPC;
 
+
+
     public static UpgradeUI Instance;
 
     private void Awake()
@@ -66,7 +68,7 @@ public class UpgradeUI : MonoBehaviour
                 MainGame.Instance.totalDPS += _upgrade.DPS;
                 
                 MainGame.Instance.totalDPC += _upgrade.DPC;
-
+                MainGame.Instance.compteurUpgrade += 10;
                 OnClickx10();
             }
             else if (n == 0)
@@ -76,15 +78,17 @@ public class UpgradeUI : MonoBehaviour
                 MainGame.Instance.totalDPS += _upgrade.DPS;
                 MainGame.Instance.totalDPC += _upgrade.DPC;
                 _upgrade.Cost += initCost;
+                MainGame.Instance.compteurUpgrade++;
             }
             else
             {
                 MainGame.Instance.totalDPS += _upgrade.DPS;
                 MainGame.Instance.totalDPC += _upgrade.DPC;
                 m += n - 1;
+                MainGame.Instance.compteurUpgrade += n - 1;
                 OnClickxMax();
             }
-            
+
 
 
             if (_upgrade.DPC > 0)

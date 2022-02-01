@@ -8,7 +8,7 @@ using DG.Tweening;
 
 public class TropheeUI : MonoBehaviour
 {
-
+    private Trophee _trophee;
     public Color ColorInitial;
     public Color ColorGris;
 
@@ -16,22 +16,54 @@ public class TropheeUI : MonoBehaviour
     public Text TextTrophee;
     public void Initialize(Trophee trophee)
     {
-        //_upgrade = upgrade;
+        _trophee = trophee;
         ImageTrophee.sprite = trophee.Sprite;
         TextTrophee.text = trophee.Description;
-        ImageTrophee.DOColor(ColorGris, 0.5f);
+        //ImageTrophee.DOColor(ColorGris, 0.5f);
     }
     public void Update()
     {
-        
-        /*if (_upgrade.Cost <= MainGame.Instance.myMoney)
+        //ImageTrophee.DOColor(ColorGris, 0.5f);
+        //for (int i = MainGame.Instance.Trophees.Count - 1; i >= 0; i--)
+        //{
+        //    if (MainGame.Instance.myMoney >= MainGame.Instance.Trophees[0].unlock)
+        //    {
+        //         ImageTrophee.DOColor(ColorGris, 0.5f);
+        //    }
+        //    else
+        //    {
+        //         ImageTrophee.DOColor(ColorInitial, 0.5f);
+        //    }
+        //}
+        //if (MainGame.Instance.myMoney >= MainGame.Instance.Trophees[0].unlock)
+        if (MainGame.Instance.compteurUpgrade >= _trophee.unlock)
         {
-             ImageTrophee.DOColor(ColorGris, 0.5f);
+            ImageTrophee.DOColor(ColorInitial, 0.5f);
+        }
+        else if (MainGame.Instance.totalMoney >= _trophee.moneyForUnlock)
+        {
+            ImageTrophee.DOColor(ColorInitial, 0.5f);
+        }
+        else if (Spawn_PopUp.Instance.howManyBossDied >= _trophee.bossKillForUnlock)
+        {
+            ImageTrophee.DOColor(ColorInitial, 0.5f);
+        }
+        else if (Spawn_PopUp.Instance.howManyDied >= _trophee.popUpKillForUnlock)
+        {
+            ImageTrophee.DOColor(ColorInitial, 0.5f);
+        }
+        else if (MainGame.Instance.compteurClick >= _trophee.clicForUnlock)
+        {
+            ImageTrophee.DOColor(ColorInitial, 0.5f);
+        }
+        else if (Spawn_PopUp.Instance.howManySpeDied >= _trophee.speKillForUnlock)
+        {
+            ImageTrophee.DOColor(ColorInitial, 0.5f);
         }
         else
         {
-            ButtonCost.DOColor(ColorInitial, 0.5f);
-        }*/
+            ImageTrophee.DOColor(ColorGris, 0.5f);
+        }
     }
 }
 
@@ -42,4 +74,9 @@ public class Trophee
     public string Description;
     public Sprite Sprite;
     public int unlock;
+    public int moneyForUnlock;
+    public int clicForUnlock;
+    public int bossKillForUnlock;
+    public int popUpKillForUnlock;
+    public int speKillForUnlock;
 }
