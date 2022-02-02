@@ -3135,6 +3135,7 @@ MonoBehaviour:
   backgroundSprite:
   - {fileID: 21300000, guid: a5006ed7d509a284891d83d39d18d20e, type: 3}
   - {fileID: 21300000, guid: 6d49ee8b92be952479936de6fd54d73f, type: 3}
+  - {fileID: 21300000, guid: 264de0210ddf61449aeeb21e7f79d197, type: 3}
   backSprite: {fileID: 21300000, guid: 132746e8d29fa94459d731bb4e8430b1, type: 3}
   backgroundImage: {fileID: 352276159}
 --- !u!4 &822838838 stripped
@@ -3620,7 +3621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6025.964, y: 1065907.4}
+  m_AnchoredPosition: {x: 6825.842, y: 1166080.8}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361

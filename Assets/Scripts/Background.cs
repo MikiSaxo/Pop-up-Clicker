@@ -27,7 +27,7 @@ public class Background : MonoBehaviour
         if (secondes % 10 == 0 && onChangeBack == true)
         {
             n++;
-            if (n > backgroundSprite.Count)
+            if (n + 1 > backgroundSprite.Count)
             {
                 n = 0;
             }
