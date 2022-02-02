@@ -10,8 +10,13 @@ public class Feedback_Damage : MonoBehaviour
 
     private void Start()
     {
-        gameObject.transform.DOMoveY(3, 1);
+        gameObject.transform.DOMoveY(3, 1).OnComplete(OnDestroyFeedback);
         text.DOFade(0, 1.5f);
         text.text = "-" + MainGame.Instance.totalDPC;
+    }
+
+    private void OnDestroyFeedback()
+    {
+        Destroy(gameObject);
     }
 }
