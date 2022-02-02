@@ -14,6 +14,12 @@ public class TropheeUI : MonoBehaviour
 
     public Image ImageTrophee;
     public Text TextTrophee;
+
+    public int notifs;
+    public void Start()
+    {
+        notifs = _trophee.notif;
+    }
     public void Initialize(Trophee trophee)
     {
         _trophee = trophee;
@@ -22,29 +28,41 @@ public class TropheeUI : MonoBehaviour
     }
     public void Update()
     {
-        if (MainGame.Instance.compteurUpgrade >= _trophee.unlock)
+        if (MainGame.Instance.totalMoney >= _trophee.moneyForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            TaskBarCommands.Instance.numberNotif += notifs;
+            notifs = 0;
         }
-        else if (MainGame.Instance.totalMoney >= _trophee.moneyForUnlock)
+        else if (MainGame.Instance.compteurClick >= _trophee.clicForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            TaskBarCommands.Instance.numberNotif += notifs;
+            notifs = 0;
         }
-        else if (Spawn_PopUp.Instance.howManyBossDied >= _trophee.bossKillForUnlock)
+        else if (MainGame.Instance.compteurUpgrade >= _trophee.unlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            TaskBarCommands.Instance.numberNotif += notifs;
+            notifs = 0;
         }
         else if (Spawn_PopUp.Instance.howManyDied >= _trophee.popUpKillForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            TaskBarCommands.Instance.numberNotif += notifs;
+            notifs = 0;
         }
-        else if (MainGame.Instance.compteurClick >= _trophee.clicForUnlock)
+        else if (Spawn_PopUp.Instance.howManyBossDied >= _trophee.bossKillForUnlock)
         {
-            ImageTrophee.DOColor(ColorInitial, 0.5f); 
+            ImageTrophee.DOColor(ColorInitial, 0.5f);
+            TaskBarCommands.Instance.numberNotif += notifs;
+            notifs = 0;
         }
         else if (Spawn_PopUp.Instance.howManySpeDied >= _trophee.speKillForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            TaskBarCommands.Instance.numberNotif += notifs;
+            notifs = 0;
         }
         else
         {
@@ -65,4 +83,5 @@ public class Trophee
     public int bossKillForUnlock;
     public int popUpKillForUnlock;
     public int speKillForUnlock;
+    public int notif = 1;
 }
