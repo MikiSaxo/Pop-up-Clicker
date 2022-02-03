@@ -54,7 +54,9 @@ MonoBehaviour:
   ColorInitial: {r: 1, g: 1, b: 1, a: 1}
   ColorGris: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.6313726}
   ImageTrophee: {fileID: 4806692939014985937}
+  ImageBackTrophee: {fileID: 6023284718439664508}
   TextTrophee: {fileID: 276630876902525870}
+  notifs: 0
 --- !u!1 &2257750223835443296
 GameObject:
   m_ObjectHideFlags: 0

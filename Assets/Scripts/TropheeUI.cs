@@ -13,6 +13,7 @@ public class TropheeUI : MonoBehaviour
     public Color ColorGris;
 
     public Image ImageTrophee;
+    public Image ImageBackTrophee;
     public Text TextTrophee;
 
     public int notifs;
@@ -23,6 +24,7 @@ public class TropheeUI : MonoBehaviour
     public void Initialize(Trophee trophee)
     {
         _trophee = trophee;
+        //ImageBackTrophee.sprite = trophee.Sprite;
         ImageTrophee.sprite = trophee.Sprite;
         TextTrophee.text = trophee.Description;
     }
@@ -31,42 +33,49 @@ public class TropheeUI : MonoBehaviour
         if (MainGame.Instance.totalMoney >= _trophee.moneyForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            ImageBackTrophee.DOColor(ColorInitial, 0.5f);
             TaskBarCommands.Instance.numberNotif += notifs;
             notifs = 0;
         }
         else if (MainGame.Instance.compteurClick >= _trophee.clicForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            ImageBackTrophee.DOColor(ColorInitial, 0.5f);
             TaskBarCommands.Instance.numberNotif += notifs;
             notifs = 0;
         }
         else if (MainGame.Instance.compteurUpgrade >= _trophee.unlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            ImageBackTrophee.DOColor(ColorInitial, 0.5f);
             TaskBarCommands.Instance.numberNotif += notifs;
             notifs = 0;
         }
         else if (Spawn_PopUp.Instance.howManyDied >= _trophee.popUpKillForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            ImageBackTrophee.DOColor(ColorInitial, 0.5f);
             TaskBarCommands.Instance.numberNotif += notifs;
             notifs = 0;
         }
         else if (Spawn_PopUp.Instance.howManyBossDied >= _trophee.bossKillForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            ImageBackTrophee.DOColor(ColorInitial, 0.5f);
             TaskBarCommands.Instance.numberNotif += notifs;
             notifs = 0;
         }
         else if (Spawn_PopUp.Instance.howManySpeDied >= _trophee.speKillForUnlock)
         {
             ImageTrophee.DOColor(ColorInitial, 0.5f);
+            ImageBackTrophee.DOColor(ColorInitial, 0.5f);
             TaskBarCommands.Instance.numberNotif += notifs;
             notifs = 0;
         }
         else
         {
             ImageTrophee.DOColor(ColorGris, 0.5f);
+            ImageBackTrophee.DOColor(ColorGris, 0.5f);
         }
     }
 }

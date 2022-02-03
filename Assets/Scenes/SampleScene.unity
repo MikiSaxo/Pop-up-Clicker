@@ -3707,7 +3707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9385.451, y: 1654452.1}
+  m_AnchoredPosition: {x: 9705.402, y: 1722448.4}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -5472,7 +5472,7 @@ MonoBehaviour:
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
     notif: 1
-  - Description: "Fais 5 am\xE9lioration dans le magasin"
+  - Description: "Ach\xE8te 5 am\xE9lioration dans le magasin"
     Sprite: {fileID: -7127196765886375475, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 5
     moneyForUnlock: 2147483647
@@ -5481,7 +5481,7 @@ MonoBehaviour:
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
     notif: 1
-  - Description: "Fais 25 am\xE9lioration dans le magasin"
+  - Description: "Ach\xE8te 25 am\xE9lioration dans le magasin"
     Sprite: {fileID: -4008160880392282330, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 25
     moneyForUnlock: 2147483647
@@ -5490,7 +5490,7 @@ MonoBehaviour:
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
     notif: 1
-  - Description: "Fais 50 am\xE9lioration dans le magasin"
+  - Description: "Ach\xE8te 50 am\xE9lioration dans le magasin"
     Sprite: {fileID: -2943924474648784008, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 50
     moneyForUnlock: 2147483647
@@ -5499,7 +5499,7 @@ MonoBehaviour:
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 2147483647
     notif: 1
-  - Description: "Fais 75 am\xE9lioration dans le magasin"
+  - Description: "Ach\xE8te 75 am\xE9lioration dans le magasin"
     Sprite: {fileID: -8066948331850967007, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 75
     moneyForUnlock: 2147483647
@@ -5589,7 +5589,7 @@ MonoBehaviour:
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 1
     notif: 1
-  - Description: "Bats 10 pop up sp\xE9ciales"
+  - Description: "Bats 10 pop up sp\xE9ciaux"
     Sprite: {fileID: 3721730225384917572, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2147483647
@@ -5598,7 +5598,7 @@ MonoBehaviour:
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 10
     notif: 1
-  - Description: "Bats 30 pop up sp\xE9ciales"
+  - Description: "Bats 30 pop up sp\xE9ciaux"
     Sprite: {fileID: 1347048553346694808, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2147483647
@@ -5607,7 +5607,7 @@ MonoBehaviour:
     popUpKillForUnlock: 2147483647
     speKillForUnlock: 30
     notif: 1
-  - Description: "Bats 50 pop up sp\xE9ciales"
+  - Description: "Bats 50 pop up sp\xE9ciaux"
     Sprite: {fileID: 2718500950499044005, guid: cae52200a19137e4095f3d68ca0a79ff, type: 3}
     unlock: 2147483647
     moneyForUnlock: 2147483647
