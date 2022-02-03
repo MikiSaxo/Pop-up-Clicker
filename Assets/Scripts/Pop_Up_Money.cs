@@ -32,7 +32,8 @@ public class Pop_Up_Money : MonoBehaviour
     {
 
         Debug.Log("bonjour c'est le popup moneyyyy");
-        m_Sprite = Spawn_PopUp.Instance.popUpSprites[1];
+        var i = Random.Range(0, 2);
+        m_Sprite = Spawn_PopUp.Instance.popUpSprites[i];
         ImagePopUp.sprite = m_Sprite;
         _lifeMax = Spawn_PopUp.Instance._lifeOfPopUp * 5;
         _life = _lifeMax;

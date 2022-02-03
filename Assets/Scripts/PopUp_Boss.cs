@@ -31,9 +31,9 @@ public class PopUp_Boss : MonoBehaviour
     public void Start()
     {
         //Debug.Log("yo le spawn de popup");
-
         Debug.Log("bonjour c'est le boss");
-        m_Sprite = Spawn_PopUp.Instance.popUpSprites[0];
+        var i = Random.Range(0, 2);
+        m_Sprite = Spawn_PopUp.Instance.popUpSprites[i];
         ImagePopUp.sprite = m_Sprite;
         _lifeMax = Spawn_PopUp.Instance._lifeOfPopUp * 10;
         _life = _lifeMax;
@@ -78,6 +78,7 @@ public class PopUp_Boss : MonoBehaviour
 
     public void GoDestroy()
     {
+        SpawnFeedBackGold.Instance.canSpawn = true;
         gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 100;
         MainGame.Instance.totalMoney += Spawn_PopUp.Instance.addMoney * 100;

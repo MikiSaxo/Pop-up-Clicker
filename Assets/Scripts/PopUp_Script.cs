@@ -17,7 +17,7 @@ public class PopUp_Script : MonoBehaviour
     public int MoveInZ = -1;
     public GameObject PopUpPrefab;
     public GameObject Feedback;
-    public GameObject FeedbackGold;
+    //public GameObject FeedbackGold;
     //public bool isBoss;
 
 
@@ -34,7 +34,7 @@ public class PopUp_Script : MonoBehaviour
         Debug.Log("yo le spawn de popup");
         //if (!isBoss)
         //{
-        var i = Random.Range(1, Spawn_PopUp.Instance.popUpSprites.Count);
+        var i = Random.Range(9, Spawn_PopUp.Instance.popUpSprites.Count);
         //Debug.Log("random number for sprite pop up : " + i);
         m_Sprite = Spawn_PopUp.Instance.popUpSprites[i];
         ImagePopUp.sprite = m_Sprite;
@@ -46,14 +46,14 @@ public class PopUp_Script : MonoBehaviour
         
     }
 
-    public void Update()
+    /*public void Update()
     {
         if (_life <= 0)
         {
             Debug.Log("spawn gold");
             Instantiate(FeedbackGold, gameObject.transform);
         }
-    }
+    }*/
 
     public void OnClickCroix()
     {
@@ -61,7 +61,7 @@ public class PopUp_Script : MonoBehaviour
         Hit(MainGame.Instance.totalDPC);
         MainGame.Instance.compteurClick++;
         gameObject.transform.DOMoveZ(-2, 0.1f);
-        //Instantiate(Feedback, gameObject.transform);
+        Instantiate(Feedback, gameObject.transform);
 
        
             //Debug.Log("first click");
@@ -96,6 +96,7 @@ public class PopUp_Script : MonoBehaviour
 
     public void GoDestroy()
     {
+        SpawnFeedBackGold.Instance.canSpawn = true;
         //Instantiate(FeedbackGold, gameObject.transform);
         gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 10;
