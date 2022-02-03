@@ -14,6 +14,7 @@ public class Background : MonoBehaviour
     float timer = 0.0f;
     int n = 0;
     int backg = 0;
+    int oldbackg = -1;
     bool onChangeBack = false;
     bool test = false;
     // Start is called before the first frame update
@@ -51,6 +52,11 @@ public class Background : MonoBehaviour
         if (secondes % 30 == 0 && onChangeBack == true)
         {
             backg = Random.Range(0, 4);
+            while (backg == oldbackg)
+            {
+                backg = Random.Range(0, 4);
+            }
+            oldbackg = backg;
             n++;
             if (n + 1 > backgroundSprite.Count)
             {
