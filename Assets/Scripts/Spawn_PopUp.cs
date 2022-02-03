@@ -35,6 +35,7 @@ public class Spawn_PopUp : MonoBehaviour
     public bool isMoney;
     public int addWeightWave;
 
+    
 
     public static Spawn_PopUp Instance;
 
@@ -47,9 +48,15 @@ public class Spawn_PopUp : MonoBehaviour
         //StartCoroutine(SpawnNewPopUp());
         //StartSpawnNewPopUp();
         //StartSpawnNewPopUp();
-        StartSpawnNewPopUp();
+        
+            
     }
-
+    public void onClickFinTuto()
+    {
+        Tuto.Instance.CanvasTuto.transform.DOScale(0, 0.5f);/*.OnComplete(PopUp_Script.Instance.RealDestroy);*/
+        
+        StartCoroutine(StartSpawnNewPopUp());
+    }
     public void Start()
     {
 
@@ -167,7 +174,7 @@ public class Spawn_PopUp : MonoBehaviour
         MainGame.Instance.totalDPC++;
     }
 
-    public void StartSpawnNewPopUp()
+    /*public void StartSpawnNewPopUp()
     {
         Debug.Log("Spawn New PopUp Start");
 
@@ -175,7 +182,18 @@ public class Spawn_PopUp : MonoBehaviour
         GameObject go = GameObject.Instantiate(PopUp, SpawnPlace[i].transform, false);
         go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
         _listPopUp.Add(go);
+    }*/
+    public IEnumerator StartSpawnNewPopUp()
+    {
+        yield return new WaitForSeconds(.5f);
+        Debug.Log("Spawn New PopUp Start");
+
+        var i = Random.Range(0, SpawnPlace.Count);
+        GameObject go = GameObject.Instantiate(PopUp, SpawnPlace[i].transform, false);
+        go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
+        _listPopUp.Add(go);
     }
+    
     public IEnumerator SpawnNewPopUp()
     {
         yield return new WaitForSeconds(.5f);

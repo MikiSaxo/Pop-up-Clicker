@@ -24,7 +24,6 @@ public class TropheeUI : MonoBehaviour
     public void Initialize(Trophee trophee)
     {
         _trophee = trophee;
-        //ImageBackTrophee.sprite = trophee.Sprite;
         ImageTrophee.sprite = trophee.Sprite;
         TextTrophee.text = trophee.Description;
     }
