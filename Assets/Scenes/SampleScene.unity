@@ -2641,7 +2641,7 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 1.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &706329933
@@ -3704,7 +3704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7252.4434, y: 1295921.1}
+  m_AnchoredPosition: {x: 7892.3457, y: 1391979.5}
   m_SizeDelta: {x: -0.2354126, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1004252361
@@ -5179,6 +5179,7 @@ GameObject:
   - component: {fileID: 1607118923}
   - component: {fileID: 1607118922}
   - component: {fileID: 1607118924}
+  - component: {fileID: 1607118925}
   m_Layer: 0
   m_Name: _Scripts
   m_TagString: Untagged
@@ -5552,6 +5553,21 @@ MonoBehaviour:
   Button5: {fileID: 1455108571}
   Button6: {fileID: 758380396}
   Button7: {fileID: 1351540109}
+--- !u!114 &1607118925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607118921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2e92a5f54fc324d8133d7ada13161e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canSpawn: 0
+  FeedbackGold: {fileID: 1840878571493992068, guid: 3d71f643a7a53d3469d34336025803e5, type: 3}
+  target: {fileID: 1154511058}
 --- !u!1 &1627919189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6653,8 +6669,8 @@ MonoBehaviour:
   damageOnClick: 1
   popUpSprites:
   - {fileID: 21300000, guid: 4bc3f1528a83e2545b45f7d407fd952a, type: 3}
-  - {fileID: 7847075388353499186, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
-  - {fileID: 1374789568716281072, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+  - {fileID: 21300000, guid: 44c607480d8de6c42bad1865987de54b, type: 3}
+  - {fileID: 21300000, guid: da81449e214618e4d8759a5e71d58c87, type: 3}
   - {fileID: 21300000, guid: 24844287eed85944086400f5240eab86, type: 3}
   - {fileID: 21300000, guid: ec8cc9d6dfd902c4ab3356ef27b13e90, type: 3}
   - {fileID: 21300000, guid: 9ad40f6ddcc3e6344b115785d183376a, type: 3}
@@ -6670,7 +6686,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9b84db7387165174082b2e668f85588e, type: 3}
   - {fileID: 21300000, guid: c0579d6ecbe3d3e498bafd056bb50e5b, type: 3}
   - {fileID: 21300000, guid: 59b6b6e145d1df54b9838d2d1164c916, type: 3}
-  - {fileID: -7436731081221578389, guid: b26764d69a7cdd8499a20e97b68bcd78, type: 3}
+  - {fileID: 21300000, guid: 4d34579bd306b124e8ac9f29c4900ed6, type: 3}
+  - {fileID: 21300000, guid: 447cb069ad7a85d45a596153b09e4a53, type: 3}
+  - {fileID: 21300000, guid: cc67e80b746bcfa4b842b5b9e65c2e57, type: 3}
+  - {fileID: 21300000, guid: 4d34579bd306b124e8ac9f29c4900ed6, type: 3}
+  - {fileID: 21300000, guid: 1b25322aaf105b44ba282060a9a47e13, type: 3}
+  - {fileID: 21300000, guid: e3bd791401b4793499ec17dceb877fb3, type: 3}
+  - {fileID: 21300000, guid: 2291ce9c67bea3649a284133a0b6bb8f, type: 3}
+  - {fileID: 21300000, guid: b2f32c65d8472a84bb9a96f3fa1e138f, type: 3}
   _listPopUp: []
   _listMiniBossPopUp:
   - {fileID: 0}
