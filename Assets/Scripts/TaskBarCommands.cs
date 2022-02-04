@@ -10,6 +10,8 @@ public class TaskBarCommands : MonoBehaviour
     public bool isNotifOpen;
     public int numberNotif = 0;
     public Text TextNotif;
+    public Text TextDPC;
+    public Text TextDPS;
 
     public GameObject Button1;
     public GameObject Button2;
@@ -56,6 +58,9 @@ public class TaskBarCommands : MonoBehaviour
     private void Update()
     {
         TextNotif.text = ""+ numberNotif;
+        TextDPC.text = "DPC : "+MainGame.Instance.totalDPC;
+        TextDPS.text = "DPS : "+MainGame.Instance.totalDPS;
+
         /* Pas opti du tout mais ça fonctionne apres faudra voir car si le joueur achete le 2 en premier bah il sera pas 
           en premier dans la barre apres qu'il achete le 1*/
         int position = 0;
