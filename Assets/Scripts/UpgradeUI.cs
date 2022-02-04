@@ -12,14 +12,14 @@ public class UpgradeUI : MonoBehaviour
     public Image Image;
     public Text Text;
     public Text TextCost;
-    
+
     public Image ButtonCost;
     public Color ColorInitial;
     public Color ColorAsserDeThune;
 
     private Upgrade _upgrade;
     public int n;
-    public int m =0;
+    public int m = 0;
     private int oldCost;
     private int initCost;
     private bool ClickMax = false;
@@ -36,7 +36,7 @@ public class UpgradeUI : MonoBehaviour
     {
         Instance = this;
     }
-        //private MainGame mainGame;
+    //private MainGame mainGame;
     public void Start()
     {
         initUpgrade = _upgrade.DPS;
@@ -58,7 +58,7 @@ public class UpgradeUI : MonoBehaviour
     }
     public void Onclick()
     {
-        
+
         if (_upgrade.Cost <= MainGame.Instance.myMoney)
         {
             MainGame.Instance.AddUpgrade(_upgrade);
@@ -67,7 +67,7 @@ public class UpgradeUI : MonoBehaviour
             {
                 m += 10;
                 MainGame.Instance.totalDPS += _upgrade.DPS;
-                
+
                 MainGame.Instance.totalDPC += _upgrade.DPC;
                 MainGame.Instance.compteurUpgrade += 10;
                 OnClickx10();
@@ -103,13 +103,13 @@ public class UpgradeUI : MonoBehaviour
         MainGame.Instance.damageOnClick += 1; //a modif
 
     }*/
- 
+
     public void OnClickx1()
     {
         ClickMax = false;
         _upgrade.Cost = initCost * m;
         _upgrade.DPS = initUpgrade * m;
-        _upgrade.DPC= initUpgradeDPC;
+        _upgrade.DPC = initUpgradeDPC;
         n = 0;
         oldCost = _upgrade.Cost;
         oldUpgrade = _upgrade.DPS;
@@ -140,7 +140,7 @@ public class UpgradeUI : MonoBehaviour
                 oldUpgrade += _upgrade.DPS;
                 _upgrade.DPC = initUpgradeDPC * 10;
             }
-            
+
             _upgrade.DPS = oldUpgrade;
             _upgrade.Cost = oldCost;
             if (_upgrade.DPC > 0)
@@ -159,17 +159,16 @@ public class UpgradeUI : MonoBehaviour
         n = 1;//pas touche sinon tout cassé :c
         while (oldCost <= MainGame.Instance.myMoney)
         {
-            
-             _upgrade.Cost += initCost;
-             oldCost += _upgrade.Cost;
+
+            _upgrade.Cost += initCost;
+            oldCost += _upgrade.Cost;
 
             _upgrade.DPS += initUpgrade;
             oldUpgrade += _upgrade.DPS;
             _upgrade.DPC += initUpgradeDPC;
             n++;
         }
-        Debug.Log(_upgrade.DPC);
-        if(n > 1)
+        if (n > 1)
         {
             if (m == 1)
             {
@@ -181,9 +180,10 @@ public class UpgradeUI : MonoBehaviour
                 oldCost -= _upgrade.Cost;
                 oldUpgrade -= _upgrade.DPS;
             }
-             _upgrade.Cost = oldCost;
+            _upgrade.DPC -= initUpgradeDPC;
+            _upgrade.Cost = oldCost;
             _upgrade.DPS = oldUpgrade;
-        }      
+        }
         else
             OnClickx1();
 
