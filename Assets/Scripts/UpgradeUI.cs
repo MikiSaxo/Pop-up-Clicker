@@ -168,6 +168,7 @@ public class UpgradeUI : MonoBehaviour
             _upgrade.DPC += initUpgradeDPC;
             n++;
         }
+        Debug.Log(_upgrade.DPC);
         if(n > 1)
         {
             if (m == 1)
@@ -179,7 +180,6 @@ public class UpgradeUI : MonoBehaviour
             {
                 oldCost -= _upgrade.Cost;
                 oldUpgrade -= _upgrade.DPS;
-                _upgrade.DPC = initUpgradeDPC;
             }
              _upgrade.Cost = oldCost;
             _upgrade.DPS = oldUpgrade;
