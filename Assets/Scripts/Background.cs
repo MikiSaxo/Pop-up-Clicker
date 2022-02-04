@@ -70,7 +70,7 @@ public class Background : MonoBehaviour
             {
                 if (backg == 0)
                 {
-                    background.transform.DOMoveY(10, 1);//décale en haut
+                    background.transform.DOMoveY(11, 1);//décale en haut
                     test = true;
                 }
                 else if (backg == 1)
@@ -85,7 +85,7 @@ public class Background : MonoBehaviour
                 }
                 else if (backg == 3)
                 {
-                    background.transform.DOMoveY(-10, 1);//décale en bas
+                    background.transform.DOMoveY(-11, 1);//décale en bas
                     test = true;
                 }
                 else if (backg == 4)
