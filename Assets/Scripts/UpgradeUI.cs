@@ -58,7 +58,7 @@ public class UpgradeUI : MonoBehaviour
     }
     public void Onclick()
     {
-        Sound_Script.Instance.PlayAchat();
+        
         if (_upgrade.Cost <= MainGame.Instance.myMoney)
         {
             MainGame.Instance.AddUpgrade(_upgrade);
@@ -91,9 +91,9 @@ public class UpgradeUI : MonoBehaviour
                 OnClickxMax();
             }
 
+            Sound_Script.Instance.PlayAchat();
 
 
-            
             Initialize(_upgrade);
             //ButtonCost.SetActive(false); //ça fonctionne ça
         }

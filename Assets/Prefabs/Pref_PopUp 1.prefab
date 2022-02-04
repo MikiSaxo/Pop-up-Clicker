@@ -133,7 +133,6 @@ MonoBehaviour:
   MoveInZ: -1
   PopUpPrefab: {fileID: 4579469007444671051}
   Feedback: {fileID: 1840878571493992068, guid: 3d71f643a7a53d3469d34336025803e5, type: 3}
-  FeedbackGold: {fileID: 2430605156986097747, guid: 56cf51454c1e3d04ba7698a200d6fea8, type: 3}
 --- !u!1 &4579469007737280946
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,8 +455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.3, y: 2.77}
-  m_SizeDelta: {x: 29.3531, y: 29.3543}
+  m_AnchoredPosition: {x: 2.2843, y: 2.727}
+  m_SizeDelta: {x: 43.1325, y: 44.4804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4579469008554359609
 CanvasRenderer:
