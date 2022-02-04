@@ -6,8 +6,8 @@ using DG.Tweening;
 
 public class MainGame : MonoBehaviour
 {
-    public List<MonsterInfos> Monsters;
-    public Monster Monster;
+    //public List<MonsterInfos> Monsters;
+    //public Monster Monster;
     public GameObject PrefabHitPoint;
     public GameObject PrefabUpgradeUI;
     public GameObject ParentUprades;
@@ -42,7 +42,7 @@ public class MainGame : MonoBehaviour
 
     void Start()
     {
-        Monster.SetMonster(Monsters[_currentMonster]);
+        //Monster.SetMonster(Monsters[_currentMonster]);
         foreach (var upgrade in Upgrades)
         {
             GameObject go = GameObject.Instantiate(PrefabUpgradeUI, ParentUprades.transform, false);

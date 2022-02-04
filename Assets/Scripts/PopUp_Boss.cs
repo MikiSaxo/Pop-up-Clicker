@@ -84,7 +84,7 @@ public class PopUp_Boss : MonoBehaviour
         MainGame.Instance.totalMoney += Spawn_PopUp.Instance.addMoney * 100;
         if (Spawn_PopUp.Instance.addNewPop <= 5)
         {
-            Spawn_PopUp.Instance.StartSpawnNewPopUp();
+            Spawn_PopUp.Instance.PopUpAfterBoss();
             Debug.Log("New popup apres mort boss");
         }
     }

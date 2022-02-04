@@ -34,6 +34,7 @@ public class Spawn_PopUp : MonoBehaviour
     public bool isBoss;
     public bool isMoney;
     public int addWeightWave;
+    public float waitNextWave = .5f;
 
     
 
@@ -57,10 +58,7 @@ public class Spawn_PopUp : MonoBehaviour
         
         StartCoroutine(StartSpawnNewPopUp());
     }
-    public void Start()
-    {
-
-    }
+   
 
     private void Update()
     {
@@ -162,6 +160,8 @@ public class Spawn_PopUp : MonoBehaviour
             addWeightWave += 2;
             whichWave++;
             addNewPop++;
+            //waitNextWave = 6f;
+            //Debug.Log("waitNExtWave = " + waitNextWave);
             UpdateWave();
         }
         else
@@ -193,12 +193,23 @@ public class Spawn_PopUp : MonoBehaviour
         go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
         _listPopUp.Add(go);
     }
+
+    public void PopUpAfterBoss()
+    {
+        var i = Random.Range(0, SpawnPlace.Count);
+        GameObject go = GameObject.Instantiate(PopUp, SpawnPlace[i].transform, false);
+        go.transform.localPosition = UnityEngine.Random.insideUnitCircle * 2;
+        _listPopUp.Add(go);
+    }
     
     public IEnumerator SpawnNewPopUp()
     {
         yield return new WaitForSeconds(.5f);
         Debug.Log("Lance Spawn New PopUp");
-
+        //if (waitNextWave == 6f)
+        //{
+        //    waitNextWave = .5f;
+        //}
         for (int j = 0; j <= 5; j++)
         {
             if (_listPopUp[j] == null)
@@ -208,18 +219,6 @@ public class Spawn_PopUp : MonoBehaviour
             }
         }
 
-        /*if (_listPopUp[0] == null)
-            _listPopUp.RemoveAt(0);
-        else if (_listPopUp[1] == null)
-            _listPopUp.RemoveAt(1);
-        else if (_listPopUp[2] == null)
-            _listPopUp.RemoveAt(2);
-        else if (_listPopUp[3] == null)
-            _listPopUp.RemoveAt(3);
-        else if (_listPopUp[4] == null)
-            _listPopUp.RemoveAt(4);
-        else if (_listPopUp[5] == null)
-            _listPopUp.RemoveAt(5);*/
 
         var i = Random.Range(0, SpawnPlace.Count);
         if (isBoss)
