@@ -57,6 +57,7 @@ public class PopUp_Script : MonoBehaviour
 
     public void OnClickCroix()
     {
+        Sound_Script.Instance.PlayClick();
         //Spawn_PopUp.Instance.HasClickCroix();
         Hit(MainGame.Instance.totalDPC);
         MainGame.Instance.compteurClick++;
@@ -96,6 +97,7 @@ public class PopUp_Script : MonoBehaviour
 
     public void GoDestroy()
     {
+        Sound_Script.Instance.PlayDestruction_PopUp();
         SpawnFeedBackGold.Instance.canSpawn = true;
         //Instantiate(FeedbackGold, gameObject.transform);
         gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);

@@ -43,6 +43,7 @@ public class PopUp_Boss : MonoBehaviour
 
     public void OnClickCroix()
     {
+        Sound_Script.Instance.PlayClick();
         //Spawn_PopUp.Instance.HasClickCroix();
         Hit(MainGame.Instance.totalDPC);
         MainGame.Instance.compteurClick++;
@@ -78,6 +79,7 @@ public class PopUp_Boss : MonoBehaviour
 
     public void GoDestroy()
     {
+        Sound_Script.Instance.PlayDestruction_PopUp();
         SpawnFeedBackGold.Instance.canSpawn = true;
         gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 100;

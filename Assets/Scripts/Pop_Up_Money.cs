@@ -43,6 +43,7 @@ public class Pop_Up_Money : MonoBehaviour
 
     public void OnClickCroix()
     {
+        Sound_Script.Instance.PlayClick();
         //Spawn_PopUp.Instance.HasClickCroix();
         //Debug.Log("first click");
         Hit(MainGame.Instance.totalDPC);
@@ -79,6 +80,7 @@ public class Pop_Up_Money : MonoBehaviour
 
     public void GoDestroy()
     {
+        Sound_Script.Instance.PlayDestruction_PopUp();
         gameObject.transform.DOScale(0, 0.1f).OnComplete(RealDestroy);
         MainGame.Instance.myMoney += Spawn_PopUp.Instance.addMoney * 100;
         MainGame.Instance.totalMoney += Spawn_PopUp.Instance.addMoney * 100;

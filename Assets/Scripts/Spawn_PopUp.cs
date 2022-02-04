@@ -160,8 +160,8 @@ public class Spawn_PopUp : MonoBehaviour
             addWeightWave += 2;
             whichWave++;
             addNewPop++;
-            //waitNextWave = 6f;
-            //Debug.Log("waitNExtWave = " + waitNextWave);
+            waitNextWave = 8f;
+            Debug.Log("waitNextWave = " + waitNextWave);
             UpdateWave();
         }
         else
@@ -204,12 +204,12 @@ public class Spawn_PopUp : MonoBehaviour
     
     public IEnumerator SpawnNewPopUp()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(waitNextWave);
         Debug.Log("Lance Spawn New PopUp");
-        //if (waitNextWave == 6f)
-        //{
-        //    waitNextWave = .5f;
-        //}
+        if (waitNextWave == 8f)
+        {
+            waitNextWave = .5f;
+        }
         for (int j = 0; j <= 5; j++)
         {
             if (_listPopUp[j] == null)
