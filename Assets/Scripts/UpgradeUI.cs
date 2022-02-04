@@ -168,10 +168,8 @@ public class UpgradeUI : MonoBehaviour
             _upgrade.DPC += initUpgradeDPC;
             n++;
         }
-        Debug.Log("boofon"+_upgrade.DPC);
         if(n > 1)
         {
-            Debug.Log("boofon123"+_upgrade.DPC);
             if (m == 1)
             {
                 oldCost -= initCost * (n);
