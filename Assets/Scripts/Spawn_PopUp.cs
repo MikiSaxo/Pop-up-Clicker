@@ -162,17 +162,13 @@ public class Spawn_PopUp : MonoBehaviour
             addNewPop++;
             waitNextWave = 8f;
             Debug.Log("waitNextWave = " + waitNextWave);
-            UpdateWave();
         }
         else
             StartCoroutine(SpawnNewPopUp());
 
     }
 
-    public void UpdateWave()
-    {
-        MainGame.Instance.totalDPC++;
-    }
+
 
     /*public void StartSpawnNewPopUp()
     {
