@@ -31,9 +31,7 @@ public class MainGame : MonoBehaviour
     public int totalDPS = 0;
     public int totalDPC = 0;
 
-    public AudioSource Click;
-    public AudioSource Achat;
-    public AudioSource Destruction_PopUp;
+    
 
     public static MainGame Instance;
 
